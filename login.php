@@ -83,7 +83,7 @@
               </div><br>
               <input type="submit" name="submit" value="login" class="btn btn-primary">
               <br>
-              <p onclick="showRegisterContainer()">Don't have an account? Sign up</p>
+              <a href="register.php">Don't have an account? Sign up</a>
             </form>
             <br>
           </div>
