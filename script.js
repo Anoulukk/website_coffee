@@ -1,3 +1,4 @@
+
 function showRegisterContainer() {
   const loginContainer = document.getElementById('login-container');
   const registerContainer = document.getElementById('register-container');
