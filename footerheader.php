@@ -37,17 +37,14 @@
             <a class="btn" href="contact.php">cotact Us</a>
           </li>
 
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              product
-            </button>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="coffee.php">Coffee</a></li>
-              <li><a class="dropdown-item" href="cookie.php">Cookie</a></li>
-              <li><a class="dropdown-item" href="cake.php">Cake</a></li>
+              <li><a class="dropdown-item" href="#">Coffee</a></li>
+              <li><a class="dropdown-item" href="#">cokkies</a></li>
+              <li><a class="dropdown-item" href="#">Cakes</a></li>
             </ul>
-          </div>
+          </li>
         </ul>
 
       </div>
@@ -61,7 +58,9 @@
         <div class="cart">
           <a href="cart.html"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
         </div>
-        <div class="btn"><a href="login.php"><button type="button" class="btn btn-primary">Login</button></a></div>
+        <li class="nav-item">
+            <a class="btn btn-primary mb-3" href="login.php">Login</a>
+          </li>
       </form>
     </div>
   </nav>

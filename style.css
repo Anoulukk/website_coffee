@@ -61,7 +61,7 @@ h2{
 .form-control.error small{
     visibility: visible;
 }
-.signup-form button{
+.form button{
     cursor: pointer;
     background-color:#3498db;
     color: aliceblue;
