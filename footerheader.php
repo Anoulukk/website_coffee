@@ -40,9 +40,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Coffee</a></li>
-              <li><a class="dropdown-item" href="#">cokkies</a></li>
-              <li><a class="dropdown-item" href="#">Cakes</a></li>
+              <li><a class="dropdown-item" href="#p_coffee">Coffee</a></li>
+              <li><a class="dropdown-item" href="#p_cookies">cokkies</a></li>
+              <li><a class="dropdown-item" href="#p_cakes">Cakes</a></li>
             </ul>
           </li>
         </ul>
@@ -77,11 +77,10 @@
     <li><a href="#">Our Service</a></li>
     <li><a href="#">Our Product</a></li>
     <li><a href="#">Contact Us</a></li>
-     <a href="home.php" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a>
-     <a href=""i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a>
-     <a href=""i class="fa-brands fa-instagram fa-2xl"></i></a>
     
-   
+    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
+    <li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
+    <li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
 
   </ul>
 </footer>
