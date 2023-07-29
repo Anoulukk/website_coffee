@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$databaseName = "coffee_shop";
+$databaseName = "coffee_shopa";
 
 $conn_db = mysqli_connect($servername, $username, $password, $databaseName);
 mysqli_query($conn_db, "SET CHARACTER SET 'utf8'");

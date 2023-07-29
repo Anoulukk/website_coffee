@@ -73,49 +73,90 @@ h2{
     font-size: 16px;
     padding: 10px;
 }
+/* box product */
+.box {
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
 
+.box:hover {
+  border: 1px solid #00b3ff;
+}
+
+.img {
+  text-align: center;
+}
+
+.img img {
+  height: 120px;
+  max-width: 150px;
+  padding-top: 10px;
+}.p_detail .col-md-4 img{
+  
+  transition: transform .2s;
+}
+.p_detail .col-md-4 img:hover{
+  transform: scale(1.5);
+}
+
+.product_name {
+  height: 3rem;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.description {
+  height: 3rem;
+  padding-top: 10px;
+  text-align: center;
+  font-weight: center;
+}
+
+.price {
+  text-align: center;
+  color: #FF1212;
+  padding-top: 10px;
+}
+
+.button {
+  padding: 10px;
+}
+
+.button a {
+  width: 100%;
+  border-radius: 20px;
+}
       /*=============== FOOTER ===============*/
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 40px;
-      }
-      
-      footer ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-      
-      footer li {
-        display: inline-block;
-        margin-right: 20px;
-        
-      }
-      footer a{
-          color: rgb(104, 38, 2);
-          text-decoration: none;
-      }
-      
-      footer li:last-child {
-        margin-right: 0;
-      }
-      @media(max-width:767px){
-        footer{
-            width: 50%;
-            margin-bottom: 30px;
-        }
-        
-      }
-      @media(max-width:574px){
-        footer{
-            width: 100%;
-            
-        }
-        
-      }
-      
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+footer a {
+  color: rgb(104, 38, 2);
+  text-decoration: none;
+}
+
+footer li:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767px) {
+  footer {
+    width: 50%;
+  }
+}
