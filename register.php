@@ -25,7 +25,7 @@
                     <div class="form-control ">
                         <label for="password">password</label>
                         <input type="" name="" id="password" placeholder="Enter your password">
-                        <small>eror message</small>
+                        <small>eror message</small> 
                     </div>
                     <div class="form-control ">
                         <label for="confirm password">confirm password</label>

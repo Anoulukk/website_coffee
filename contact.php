@@ -4,7 +4,7 @@
 <body>
 <div class="card text-center">
   <div class="card-header">
-    Featured
+    about Us
   </div>
   <div class="card-body">
     <h5 class="card-title">Special title treatment</h5>

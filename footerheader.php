@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
   <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
@@ -59,8 +61,8 @@
           <a href="cart.html"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
         </div>
         <li class="nav-item">
-            <a class="btn btn-primary mb-3" href="login.php">Login</a>
-          </li>
+          <a class="btn btn-primary mb-3" href="login.php">Login</a>
+        </li>
       </form>
     </div>
   </nav>
@@ -68,21 +70,19 @@
 
 
 <footer>
+<ul>
 
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Our Service</a></li>
+<li><a href="#">Our Product</a></li>
+<li><a href="#">Contact Us</a></li>
 
-  <ul>
+<li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
+<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
+<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
 
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Our Service</a></li>
-    <li><a href="#">Our Product</a></li>
-    <li><a href="#">Contact Us</a></li>
-    
-    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
-    <li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
-    <li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-
-  </ul>
+</ul>
 </footer>
 <script src="script.js"></script>
 
