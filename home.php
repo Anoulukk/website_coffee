@@ -11,9 +11,9 @@ include('config.php'); ?>
         <div class="row">
             <?php
 
-            $sql = "SELECT p.*, c.id AS category_id, c.parent_id, c.name AS category_name
+            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
             FROM product p
-            JOIN category c ON p.parent_id = c.parent_id";
+            JOIN parent c ON p.parent_id = c.parent_id";
 
 
 
@@ -27,7 +27,7 @@ include('config.php'); ?>
                     </div>
 
                     <div class="product_name">
-                        <?php echo $row['p_name'] ?>
+                        <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
                         <?php echo $row['category_name'] ?>
@@ -37,7 +37,7 @@ include('config.php'); ?>
                     </div>
 
                     <div class="button">
-                        <a href="cart.php?id=<?= $row['id'] ?>" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php?id=<?=$row['pro_id']?>" class="btn btn-outline-primary">buy</a>
                     </div>
                 </div>
             <?php } ?>
