@@ -42,9 +42,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#p_coffee">Coffee</a></li>
-              <li><a class="dropdown-item" href="#p_cookies">cokkies</a></li>
-              <li><a class="dropdown-item" href="#p_cakes">Cakes</a></li>
+              <li><a class="dropdown-item" href="coffee.php">Coffee</a></li>
+              <li><a class="dropdown-item" href="cookie.php">cokkies</a></li>
+              <li><a class="dropdown-item" href="cakes.php">Cakes</a></li>
             </ul>
           </li>
         </ul>
