@@ -25,7 +25,7 @@ include('config.php'); ?>
                 <div class="col-md-3 box">
 
                     <div class="img">
-                        <img src="img2/<?php echo $row['picture'] ?>" alt="">
+                        <img src="img/<?php echo $row['picture'] ?>" alt="">
                     </div>
 
                     <div class="product_name">
