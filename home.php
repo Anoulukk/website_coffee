@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
   <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Document</title>
-<link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 
-    <?php
-include('config.php'); ?>
+  <?php
+  include('config.php'); ?>
 </head>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
@@ -67,71 +68,63 @@ include('config.php'); ?>
     </div>
   </nav>
 </header>
-<body>
-    <div class="container">
-        <div class="row">
-            <?php
 
-            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name
+<body>
+  <div class="container">
+    <div class="row">
+      <?php
+
+      $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name
             FROM product p
             JOIN parent c ON p.parent_id = c.parent_id";
 
 
 
-            $result = mysqli_query($conn_db, $sql);
-            $no = 1;
-            while ($row = mysqli_fetch_assoc($result)) { ?>
-                <div class="col-md-3 box">
+      $result = mysqli_query($conn_db, $sql);
+      $no = 1;
+      while ($row = mysqli_fetch_assoc($result)) { ?>
+        <div class="col-md-3 box">
 
-                    <div class="img">
-                        <img src="img/<?php echo $row['picture'] ?>" alt="">
-                    </div>
+          <div class="img">
+            <img src="img/<?php echo $row['picture'] ?>" alt="">
+          </div>
 
-                    <div class="product_name">
-                        <?php echo $row['pro_name'] ?>
-                    </div>
-                    <div class="parent">
-                        <?php echo $row['pr_name'] ?>
-                    </div>
-                    <div class="price">
-                        ລາຄາ <?php echo number_format($row['price']) ?> ກີບ
-                    </div>
+          <div class="product_name">
+            <?php echo $row['pro_name'] ?>
+          </div>
+          <div class="parent">
+            <?php echo $row['pr_name'] ?>
+          </div>
+          <div class="price">
+            ລາຄາ
+            <?php echo number_format($row['price']) ?> ກີບ
+          </div>
 
-                    <div class="button">
-                        <a href="cart.php?id=<?=$row['pro_id']?>" class="btn btn-outline-primary">buy</a>
-                    </div>
-                </div>
-            <?php } ?>
-
-
+          <div class="button">
+            <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary">buy now</a>
+          </div>
         </div>
+      <?php } ?>
+
+
     </div>
+  </div>
+  </body>
+  <footer>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Our Service</a></li>
+    <li><a href="#">Our Product</a></li>
+    <li><a href="#">Contact Us</a></li>
 
-    <script src="script.js"></script>
+    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li>
+    <li><a href="https://www.tiktok.com/" i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
+    <li><a href="https://www.instagram.com/" i class="fa-brands fa-instagram fa-2xl"></i></a></li>
 
-
-</body>
-<footer>
-<ul>
-
-
-
-<li><a href="#">Home</a></li>
-<li><a href="#">About Us</a></li>
-<li><a href="#">Our Service</a></li>
-<li><a href="#">Our Product</a></li>
-<li><a href="#">Contact Us</a></li>
-
-<li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
-<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
-<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-
-</ul>
+  </ul>
 </footer>
-
 </html>
-
-
 
 
 

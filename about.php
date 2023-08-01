@@ -1,24 +1,49 @@
+<title>Document</title>
+<?php include('footerheader.php'); ?>
 
-    <title>Document</title>
-    <?php include('footerheader.php');?>
-    
 </head>
+
 <body>
-<div class="card text-center">
-  <div class="card-header">
-    about Us
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="home.php" class="btn btn-primary">back</a>
-  </div>
-  <div class="card-footer text-body-secondary">
-    2 days ago
+  
+  <div class="card text-center">
+    <div class="card-header">
+      about Us
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">About Us</h5>
+      <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+    Thank you for your interest in Cafe Coffee Day. We are glad to expand our existing (Company owned or company operated) cafes. However, We do NOT franchise.We would be glad to partner with you, if you own a commercial or commercially converted/convertible retail space on a rental/revenue share basis with the following specifications:
+1) Retail Space Area: 1000 - 1500Sqft (Ground Floor)
+2) Minimum Frontage: 25 running feet
+3) Ample Parking space
+If you meet our specifications mentioned above, please write to us with the following (mandatory) details and we?ll get back to you soon.
+a. Name(s) of one or all the owners of the retail space.
+b. Postal Residential Address, Contact Numbers and email id of t   he owner/owners
+c. Postal Address of the Retail Space
+d. Retail Space Area (square feet)
+e. Frontage of the Retail Space
+f. Photographs of your location
+g. Demographics of the catchment area 
+    </div>
+    <div class="col">
+      
+    </div>
   </div>
 </div>
-<script src="script.js"></script>
+      
+    </div>
+    <div class="card-footer text-body-secondary">
+    <a href="home.php" class="btn btn-primary">back</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
 
 </body>
 <script src="script.js"></script>
+
 </html>
