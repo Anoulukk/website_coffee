@@ -1,5 +1,10 @@
 
-<?php include ('footerheader.php')?>
+<?php
+include('config.php'); 
+include ('footerheader.php');
+session_start();
+
+?>
 <body>
      <!-- login -->
      <div class="container-sm">
@@ -8,17 +13,13 @@
           <div class="col-md-3"></div>
           <div class="col-md-6">
             <h5>Login</h5>
-            <form id="login-form" class="form">
-            <div class="form-control">
-              <input type="text" name="username" id="login-username" required
-                placeholder="Username"></div>
-                <div class="form-control">
-              <input type="password" name="password" id="login-password" class="form-control" required placeholder="Password">
-              </div><br>
-              <input type="submit" name="submit" value="login" class="btn btn-primary">
-              <br>
+            <form action="login_check.php" method="post">
+        <input type="text" name="username" class="form-control" required placeholder="username">
+        <input type="password" name="password" class="form-control" required placeholder="password"> <br>
+        <input type="submit" name="submit" value="login" class="btn btn-primary">
+      </form>
               <a href="register.php">Don't have an account? Sign up</a>
-            </form>
+   
             <br>
           </div>
         </div>

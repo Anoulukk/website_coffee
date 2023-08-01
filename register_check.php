@@ -1,30 +1,34 @@
 <?php
-include 'config.php';
-session_start();
+include('config.php');
+// $data = $_GET['data'];
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $lastname = $_POST["lastname"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    // Extract other properties as needed
-    $password=hash('sha512',$password);
+
+if (isset($_GET['data'])) {
+    $data = $_GET['data'];
+    $dataArray = json_decode($data, true);
+    // print_r($dataArray);
+    $username = $dataArray['username'];
+    $lastname = $dataArray['lastname'];
+    $email = $dataArray['email'];
+    $password = $dataArray['password1'];
+
     
-    // Insert the data into the database
-    $sql = "INSERT INTO `customer`(`customer_id`, `cus_firstname`, `cus_lastname`, `email`, `password`) VALUES
-                                 ('','$username','$lastname','$email','$password')";
-    // Modify the SQL query as per your database table structure and data
-
-    if ($conn_db->query($sql) === TRUE) {
-        //echo "Registration successful!";
-    $show=header("location:login.php");
-    echo $show;
-
-
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn_db->error;
+    
+        $hashedPassword = hash('sha512', $password);
+    
+        // Insert the data into the database
+        $sql = "INSERT INTO `customer` (`customer_id`, `cus_firstname`, `cus_lastname`, `email`, `password`) VALUES
+                ('', '$username', '$lastname', '$email', '$hashedPassword')";
+    
+        if ($conn_db->query($sql) === TRUE) {
+            $response = array('status' => 'success', 'message' => 'Registration successful!');
+            // echo json_encode($response);
+        } else {
+            $response = array('status' => 'error', 'message' => 'Error: ' . $sql . "<br>" . $conn->error);
+            echo json_encode($response);
+        }
     }
-}
+    
+    $conn_db->close();
 
-$conn_db->close();
 ?>
