@@ -44,7 +44,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="coffee.php">Coffee</a></li>
               <li><a class="dropdown-item" href="cookie.php">cokkies</a></li>
-              <li><a class="dropdown-item" href="cakes.php">Cakes</a></li>
+              <li><a class="dropdown-item" href="cake.php">Cakes</a></li>
             </ul>
           </li>
         </ul>
