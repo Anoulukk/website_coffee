@@ -18,14 +18,14 @@ h2{
 }
 .form-control{
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 20px0;
 
 } 
 .form-control label{
     color: #972c2c;
     display: block;
-    margin-bottom: px;
+    margin-bottom: 5px;
 
 }
 .form-control input{

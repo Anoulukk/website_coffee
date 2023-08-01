@@ -1,3 +1,10 @@
+<?php
+session_start();
+include('config.php');
+if(!isset($_SESSION["cus_id"])){
+    $show=header("location:login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +17,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
 
-  <?php
-  include('config.php'); ?>
+
 </head>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
