@@ -7,6 +7,44 @@ include('config.php'); ?>
 
 
 <body>
+    <div class="container"hidden>
+        <div class="row">
+            <?php
+
+            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
+            FROM product p
+            JOIN parent c ON p.parent_id = c.parent_id";
+
+
+
+            $result = mysqli_query($conn_db, $sql);
+            $no = 1;
+            while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="col-md-3 box">
+
+                    <div class="img">
+                        <img src="img/<?php echo $row['picture'] ?>" alt="">
+                    </div>
+
+                    <div class="product_name">
+                        <?php echo $row['pro_name'] ?>
+                    </div>
+                    <div class="parent">
+                        <?php echo $row['category_name'] ?>
+                    </div>
+                    <div class="price">
+                        ລາຄາ <?php echo number_format($row['price']) ?> ກີບ
+                    </div>
+
+                    <div class="button">
+                        <a href="cart.php?id=<?=$row['pro_id']?>" class="btn btn-outline-primary">buy</a>
+                    </div>
+                </div>
+            <?php } ?>
+
+
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <?php
