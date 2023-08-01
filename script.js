@@ -1,5 +1,6 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
+const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const password1 = document.getElementById('password');
 const password2 = document.getElementById('re-password');
@@ -7,7 +8,7 @@ const password2 = document.getElementById('re-password');
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-    checkiput([username, email, password1, password2]);
+    checkiput([username, lastname, email, password1, password2]);
 
     if (!validateEmail(email.value.trim())) {
         showerror(email, 'enter email again')
@@ -16,6 +17,7 @@ form.addEventListener('submit', function (e) {
     }
     checkpassword(password1,password2);
     checkinputlength(username,5,15);
+    checkinputlength(lastname,5,15);
     checkinputlength(password1,5,15);
     
 
@@ -60,9 +62,9 @@ function checkpassword(password1,password2){
 function checkinputlength(input,min,max){
 if(input.value.length<=min){
     console.log('<5');
-    showerror(input,`${getinputCase(input)} ต้องหลายกว่า ${min} ตวฮักษร`);
+    showerror(input,`${getinputCase(input)} must be more than ${min} characters`);
 }else if(input.value.length>=max){
-    showerror(input,`${getinputCase(input)} ต้องหลายกว่า ${max} ตวฮักษร`);
+    showerror(input,`${getinputCase(input)} must be more than ${max} characters`);
 }else{
     showsuccess(input);
 }

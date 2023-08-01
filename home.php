@@ -11,7 +11,7 @@ include('config.php'); ?>
         <div class="row">
             <?php
 
-            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
+            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name
             FROM product p
             JOIN parent c ON p.parent_id = c.parent_id";
 
@@ -30,7 +30,7 @@ include('config.php'); ?>
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['category_name'] ?>
+                        <?php echo $row['pr_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ <?php echo number_format($row['price']) ?> ກີບ
@@ -50,16 +50,16 @@ include('config.php'); ?>
 
 
 </body>
-<footer>
+
 <ul>
 
 
 </body>
-<li><a class="btn"href="home.php">Home</a></li>
-<li><a class="btn"href="about.php">About Us</a></li>
-<li><a class="btn"href="service.php">Our Service</a></li>
-<li><a class="btn"href="all_product.php">Our Product</a></li>
-<li><a class="btn"href="contact.php">Contact Us</a></li>
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Our Service</a></li>
+<li><a href="#">Our Product</a></li>
+<li><a href="#">Contact Us</a></li>
 
 <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
 <li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>

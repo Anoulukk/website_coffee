@@ -17,6 +17,12 @@
                         <input type="" name="" id="username" placeholder="Enter your username">
                         <small>eror message</small>
                     </div>
+                    
+                    <div class="form-control">
+                        <label for="lastname">lastname</label>
+                        <input type="" name="" id="lastname" placeholder="Enter your lastname">
+                        <small>eror message</small>
+                    </div>
                     <div class="form-control ">
                         <label for="Email">Email</label>
                         <input type="" name="" id="email" placeholder="Enter your Email">
