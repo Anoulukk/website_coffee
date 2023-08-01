@@ -68,7 +68,7 @@
   </nav>
 </header>
 
-<body>
+
 
 <footer>
 <li><a href="#">Home</a></li>

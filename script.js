@@ -19,7 +19,6 @@ form.addEventListener('submit', function (e) {
     checkinputlength(username,5,15);
     checkinputlength(lastname,5,15);
     checkinputlength(password1,5,15);
-    
 
 
 });
@@ -55,8 +54,13 @@ function getinputCase(input){
     return input.id.value;
 }
 function checkpassword(password1,password2){
-    if(password1.value !== password2.value)
+    if(password1.value !== password2.value){
     showerror(password2,'password no same');
+    }else{
+      // Redirect to the login page
+    window.location.href = "http://localhost/website_coffee/";
+
+    }   
 
 }
 function checkinputlength(input,min,max){
@@ -67,6 +71,7 @@ if(input.value.length<=min){
     showerror(input,`${getinputCase(input)} must be more than ${max} characters`);
 }else{
     showsuccess(input);
+
 }
 }
 var x=10;
