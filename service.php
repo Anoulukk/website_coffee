@@ -57,4 +57,17 @@
 
 </body>
 <script src="script.js"></script>
+<footer class="flex">
+<li><a href="#">Home</a></li>
+<li><a href="#">About Us</a></li>
+<li><a href="#">Our Service</a></li>
+<li><a href="#">Our Product</a></li>
+<li><a href="#">Contact Us</a></li>
+
+<li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
+<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
+<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+
+</ul>
+</footer>
 </html>

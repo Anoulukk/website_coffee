@@ -139,6 +139,12 @@ h2{
         text-align: center;
 
       }
+      footer .flex {
+        background-color: #f2f2f2;
+        padding: 20px;
+        text-align: center;
+      }
+      
       
       footer ul {
         list-style-type: none;

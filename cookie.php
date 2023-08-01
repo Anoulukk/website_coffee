@@ -11,9 +11,11 @@ include('config.php'); ?>
         <div class="row">
             <?php
 
-            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
-            FROM product p
-            JOIN parent c ON p.parent_id = c.parent_id";
+            $sql = "SELECT p.parent_id, p.pr_name AS parent_name, 
+            pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
+            FROM parent p
+     JOIN product pr ON p.parent_id = pr.parent_id
+     WHERE p.parent_id = 2";
 
 
 
@@ -23,14 +25,14 @@ include('config.php'); ?>
                 <div class="col-md-3 box">
 
                     <div class="img">
-                        <img src="img/<?php echo $row['picture'] ?>" alt="">
+                        <img src="img2/<?php echo $row['picture'] ?>" alt="">
                     </div>
 
                     <div class="product_name">
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['category_name'] ?>
+                        <?php echo $row['parent_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ <?php echo number_format($row['price']) ?> ກີບ
