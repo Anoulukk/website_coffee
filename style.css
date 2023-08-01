@@ -139,13 +139,6 @@ h2{
         text-align: center;
 
       }
-      footer .flex {
-        background-color: #f2f2f2;
-        padding: 20px;
-        text-align: center;
-      }
-      
-      
       footer ul {
         list-style-type: none;
         margin: 0;
@@ -165,4 +158,30 @@ h2{
       footer li:last-child {
         margin-right: 0;
       }
+  /* footer for product page       */
+      .flex {
+        background-color: #f2f2f2;
+        padding: 15px;
+        text-align: center;
+      }
+      .flex ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .flex li {
+        display: inline-block;
+        margin-right: 20px;
+        
+      }
+      .flex a{
+          color: rgb(104, 38, 2);
+          text-decoration: none;
+      }
+      
+      .flex li:last-child {
+        margin-right: 0;
+      }
+      
       
