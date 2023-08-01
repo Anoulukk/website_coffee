@@ -5,78 +5,123 @@ const email = document.getElementById('email');
 const password1 = document.getElementById('password');
 const password2 = document.getElementById('re-password');
 
-
 form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    checkiput([username, lastname, email, password1, password2]);
-
-    if (!validateEmail(email.value.trim())) {
-        showerror(email, 'enter email again')
-    } else {
-        showsuccess(email,);
+    const isValid = validateFormInputs();
+    if (!isValid) {
+        e.preventDefault(); // Prevent form submission if validation fails
+    }else{
+        sendDataToServer()
     }
-    checkpassword(password1,password2);
-    checkinputlength(username,5,15);
-    checkinputlength(lastname,5,15);
-    checkinputlength(password1,5,15);
-
-
 });
-function showerror(input, message) {
-    const formcontrol = input.parentElement;
-    formcontrol.className = 'form-control error';
-    const small = formcontrol.querySelector('small');
+
+
+function showError(input, message, duration = 3000) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control error';
+    const small = formControl.querySelector('small');
     small.innerText = message;
+
+    // Clear the error message after the specified duration (default is 3000ms/3 seconds)
+    setTimeout(function () {
+        formControl.classList.remove('error');
+        small.innerText = '';
+    }, duration);
 }
-function showsuccess(input) {
-    const formcontrol = input.parentElement;
-    formcontrol.className = 'form-control success';
+
+
+function showSuccess(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success';
 }
-//kuad khuam thuek tong khorng email
+
+// Function to validate email
 function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-function checkiput(inputArray) {
-    inputArray.forEach(function(input) {
-        if (input.value.trim() === ''){
-            showerror(input, `please enter ${input.id}`);
+
+function checkInput(inputArray) {
+    inputArray.forEach(function (input) {
+        if (input.value.trim() === '') {
+            showError(input, `Please enter ${getInputCase(input)}`);
         } else {
-            showsuccess(input);
+            showSuccess(input);
         }
-
-
     });
 }
-function getinputCase(input){
-    console.log(input);
-    // return input.id.char(0).toUpperCase()+input.id.slice(1);
-    return input.id.value;
-}
-function checkpassword(password1,password2){
-    if(password1.value !== password2.value){
-    showerror(password2,'password no same');
-    }else{
-      // Redirect to the login page
-    window.location.href = "http://localhost/website_coffee/";
 
-    }   
+function getInputCase(input) {
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+}
 
+function checkPassword(password1, password2) {
+    if (password1.value !== password2.value) {
+        showError(password2, 'Passwords do not match');
+    } else {
+        showSuccess(password2);
+    }
 }
-function checkinputlength(input,min,max){
-if(input.value.length<=min){
-    console.log('<5');
-    showerror(input,`${getinputCase(input)} must be more than ${min} characters`);
-}else if(input.value.length>=max){
-    showerror(input,`${getinputCase(input)} must be more than ${max} characters`);
-}else{
-    showsuccess(input);
 
+function checkInputLength(input, min, max) {
+    const length = input.value.length;
+    if (length < min) {
+        showError(input, `${getInputCase(input)} must be at least ${min} characters`);
+    } else if (length > max) {
+        showError(input, `${getInputCase(input)} must be less than ${max} characters`);
+    } else {
+        showSuccess(input);
+    }
 }
+function validateFormInputs() {
+    // Perform all form validation checks here
+    const isValidUsername = username.value.trim().length >= 5 && username.value.trim().length <= 15;
+    const isValidLastname = lastname.value.trim().length >= 5 && lastname.value.trim().length <= 15;
+    const isValidEmail = validateEmail(email.value.trim());
+    const isValidPassword = password1.value.trim().length >= 5 && password1.value.trim().length <= 15;
+    const arePasswordsMatching = password1.value === password2.value;
+
+    // Show error messages for invalid inputs
+    if (!isValidUsername) {
+        showError(username, 'Username must be between 5 and 15 characters');
+    } else {
+        showSuccess(username);
+    }
+
+    if (!isValidLastname) {
+        showError(lastname, 'Lastname must be between 5 and 15 characters');
+    } else {
+        showSuccess(lastname);
+    }
+
+    if (!isValidEmail) {
+        showError(email, 'Please enter a valid email address');
+    } else {
+        showSuccess(email);
+    }
+
+    if (!isValidPassword) {
+        showError(password1, 'Password must be between 5 and 15 characters');
+    } else {
+        showSuccess(password1);
+    }
+
+    if (!arePasswordsMatching) {
+        showError(password2, 'Passwords do not match');
+    } else {
+        showSuccess(password2);
+    }
+
+    // Return true if all validation checks pass, otherwise return false
+    return isValidUsername && isValidLastname && isValidEmail && isValidPassword && arePasswordsMatching;
 }
-var x=10;
-if(x===10){
-    let y=111;
-    console.log("y="+y);
+function sendDataToServer() {
+     
+    let data = {
+     username:username.value,
+     lastname:lastname.value,
+     email:email.value,
+     password1:password1.value
+    }
+    window.location.href = `http://localhost/loginsas/insert_data.php?data=${JSON.stringify(data)}`
+    console.log(data);
 }
-console.log("y="+y);
