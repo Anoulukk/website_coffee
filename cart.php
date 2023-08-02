@@ -61,7 +61,7 @@
                     <input type="submit" value="search" name="btn" class="btn btn-primary mb-3 ">
                 </div>
                 <div class="cart">
-                    <a href="cart.html"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
+                    <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
                 </div>
                 <li class="nav-item">
                     <a class="btn btn-primary mb-3" href="login.php">Login</a>
@@ -287,9 +287,9 @@ WHERE p.parent_id = 3";
     <li><a href="coffee.php">Our Product</a></li>
     <li><a href="contact.php">Contact Us</a></li>
 
-    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li>
-    <li><a href="https://www.tiktok.com/" i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
-    <li><a href="https://www.instagram.com/" i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-xl" ></i></a></li> 
+<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-xl" ></i></a></li>
+<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-xl"></i></a></li>
 
     </ul>
 </div>

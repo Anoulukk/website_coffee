@@ -1,187 +1,216 @@
 .container-sm {
-    max-height: 90px;
+  max-height: 90px;
 
 }
-  .logo {
-    max-width: 150px;
-    max-height: 150px;
+.logo {
+  max-width: 100px;
+  max-height: 100px;
+}
+.text-center .card-body .text-center .row .col .float{
+  width:40vw;
+  animation: float 3s linear infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+      transform: translateY(0rem);
   }
+  50%{
+      transform: translateY(-3.5rem);
+  }
+}
 
 .form{
-    padding: 30px 40px;
+  padding: 30px 40px;
 
 }
 h2{
-    text-align:center ;
-    margin: 0,0,0,20px;
+  text-align:center ;
+  margin: 0,0,0,20px;
 
 }
 .form-control{
-    position: relative;
-    margin-bottom: 5px;
-    padding: 20px0;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 20px0;
 
 } 
 .form-control label{
-    color: #972c2c;
-    display: block;
-    margin-bottom: 5px;
+  color: #972c2c;
+  display: block;
+  margin-bottom: 5px;
 
 }
 .form-control input{
-    height: 40px;
-    width: 100%;
-    border: none;
-     border-radius: 30px;
-    color: rgb(0, 0, 0);
-    font-size: 15px;
-    padding: 0 0 0 10px;
-    background: rgba(140, 61, 0, 0.16);
-    outline: none;
+  height: 40px;
+  width: 100%;
+  border: none;
+   border-radius: 30px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  padding: 0 0 0 10px;
+  background: rgba(140, 61, 0, 0.16);
+  outline: none;
 }
 .form-control input :focus{
-    outline: 0;
-    border-color: #13a84a;
+  outline: 0;
+  border-color: #13a84a;
 }
 .form-control.error input{
-    border-color: red;
+  border-color: red;
 
 }
 .form-control.success input{
-    border-color:lightseagreen;
-    
+  border-color:lightseagreen;
+  
 }
 .form-control small{
-    color:red;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    visibility: hidden;
+  color:red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
 }
 .form-control.error small{
-    visibility: visible;
+  visibility: visible;
 }
 .form button{
-    cursor: pointer;
-    background-color:#3498db;
-    color: aliceblue;
-    border: none;
-    border-radius: 30px;
-    margin-top:20px ;
-    width: 100%;
-    display: block;
-    font-size: 16px;
-    padding: 10px;
+  cursor: pointer;
+  background-color:#3498db;
+  color: aliceblue;
+  border: none;
+  border-radius: 30px;
+  margin-top:20px ;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
 }
 /* box product */
 .box {
-  border: 1px solid #ccc;
-  margin-top: 20px;
+border: 1px solid #ccc;
+margin-top: 20px;
+
 }
 
 .box:hover {
-  border: 1px solid #00b3ff;
+border: 1px solid#7C492D;
 }
 
 .img {
-  text-align: center;
+text-align: center;
 }
 
 .img img {
-  height: 120px;
-  max-width: 150px;
-  padding-top: 10px;
+height: 120px;
+max-width: 150px;
+padding-top: 10px;
 }.p_detail .col-md-4 img{
-  
-  transition: transform .2s;
+
+transition: transform .2s;
 }
 .p_detail .col-md-4 img:hover{
-  transform: scale(1.5);
+transform: scale(1.5);
 }
 
 .product_name {
-  height: 3rem;
-  padding-top: 10px;
-  text-align: center;
-  font-weight: bolder;
+height: 1.5rem;
+text-align: center;
+font-weight: bolder;
 }
+.parent{
+text-align: center;
 
-.description {
-  height: 3rem;
-  padding-top: 10px;
-  text-align: center;
-  font-weight: center;
 }
-
 .price {
-  text-align: center;
-  color: #FF1212;
-  padding-top: 10px;
+text-align: center;
+color: #FF1212;
 }
 
 .button {
-  padding: 10px;
+padding: 10px;
 }
 
 .button a {
-  width: 100%;
-  border-radius: 20px;
+width: 100%;
+border-radius: 20px;
 }
-      /*=============== FOOTER ===============*/
+    /*=============== FOOTER ===============*/
 
-      footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 15px;
-        text-align: center;
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to top,#7C492D , #ffffff00);
+      padding: 15px;
+      text-align: center;
 
-      }
-      footer ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
+    }
+    footer ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    footer li {
+      display: inline-block;
+      margin-right: 20px;
       
-      footer li {
-        display: inline-block;
-        margin-right: 20px;
-        
-      }
-      footer a{
-          color: rgb(104, 38, 2);
-          text-decoration: none;
-      }
+    }
+    footer a{
+        color: rgb(104, 38, 2);
+        text-decoration: none;
+    }
+    
+    footer li:last-child {
+      margin-right: 0;
+    }
+/* footer for product page       */
+    .flex {
+      background: linear-gradient(to top,#7C492D , #ffffff00);
+
+      padding: 15px;
+      text-align: center;
+    }
+    .flex ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .flex li {
+      display: inline-block;
+      margin-right: 20px;
       
-      footer li:last-child {
-        margin-right: 0;
-      }
-  /* footer for product page       */
-      .flex {
-        background-color: #f2f2f2;
-        padding: 15px;
-        text-align: center;
-      }
-      .flex ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .flex li {
-        display: inline-block;
-        margin-right: 20px;
-        
-      }
-      .flex a{
-          color: rgb(104, 38, 2);
-          text-decoration: none;
-      }
-      
-      .flex li:last-child {
-        margin-right: 0;
-      }
-      
-      
+    }
+    .flex a{
+        color: rgb(104, 38, 2);
+        text-decoration: none;
+    }
+    
+    .flex li:last-child {
+      margin-right: 0;
+    }
+    
+    /* Adjust the styles as needed */
+    .image-description {
+      position: fixed;
+      bottom: 100; /* Position the description at the vertical center of the screen */
+      left: 50%; /* Position the description at the horizontal center of the screen */
+      transform: translate(-50%, 50%); /* Move the description to the exact center */
+      width: 100%;
+      max-width: 400px; /* Set the maximum width for the description */
+      background-color: rgb(144, 81, 8);
+      color: #fff;
+      border-radius: 20px;
+      font-size: 14px;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 999; /* Ensure the description appears above other elements */
+    }
+    
+    .hover-image:hover + .image-description {
+      opacity: 1;
+    }

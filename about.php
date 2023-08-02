@@ -52,9 +52,9 @@ g. Demographics of the catchment area
 <li><a href="coffee.php">Our Product</a></li>
 <li><a href="contact.php">Contact Us</a></li>
 
-<li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li> 
-<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
-<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+<li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-xl" ></i></a></li> 
+<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-xl" ></i></a></li>
+<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-xl"></i></a></li>
 
 </ul>
 </footer>

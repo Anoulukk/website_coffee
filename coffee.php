@@ -62,10 +62,11 @@ WHERE p.parent_id = 1";
             $no = 1;
             while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-3 box">
-
-                    <div class="img">
-                        <img src="img/<?php echo $row['picture'] ?>" alt="">
-                    </div>
+                    
+                <div class="img">
+            <img src="img/<?php echo $row['picture'] ?>" alt="Image" class="hover-image">
+            <div class="image-description"><?php echo $row['description'] ?></div>
+          </div>
 
                     <div class="product_name">
                         <?php echo $row['pro_name'] ?>
@@ -99,9 +100,9 @@ WHERE p.parent_id = 1";
     <li><a href="coffee.php">Our Product</a></li>
     <li><a href="contact.php">Contact Us</a></li>
 
-    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-2xl" style="color: #1877f2;"></i></a></li>
-    <li><a href="https://www.tiktok.com/" i class="fa-brands fa-tiktok fa-2xl" style="color: #000000;"></i></a></li>
-    <li><a href="https://www.instagram.com/" i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+    <li><a href="https://www.facebook.com/" i class="fa-brands fa-facebook fa-xl" ></i></a></li> 
+<li><a href="https://www.tiktok.com/"i class="fa-brands fa-tiktok fa-xl" ></i></a></li>
+<li><a href="https://www.instagram.com/"i class="fa-brands fa-instagram fa-xl"></i></a></li>
 
     </ul>
 </div>

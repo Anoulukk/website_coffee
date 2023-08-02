@@ -58,7 +58,7 @@
           <input type="submit" value="search" name="btn" class="btn btn-primary mb-3 ">
         </div>
         <div class="cart">
-          <a href="cart.html"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
+          <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
         </div>
         <li class="nav-item">
           <a class="btn btn-primary mb-3" href="login.php">Login</a>
