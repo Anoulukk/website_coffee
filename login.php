@@ -13,9 +13,13 @@ session_start();
           <div class="col-md-3"></div>
           <div class="col-md-6">
             <h5>Login</h5>
-            <form action="login_check.php" method="post">
+            <form action="login_check.php"  method="post">
+              <div class="form-control">
         <input type="text" name="username" class="form-control" required placeholder="username">
-        <input type="password" name="password" class="form-control" required placeholder="password"> <br>
+              </div>
+              <div class="form-control">
+        <input type="password" name="password" class="form-control" required placeholder="password">
+          </div>
         <input type="submit" name="submit" value="login" class="btn btn-primary">
       </form>
               <a href="register.php">Don't have an account? Sign up</a>
@@ -26,6 +30,5 @@ session_start();
       </div>
     </div>
 </body>
-<script src="script.js"></script>
 
 </html>

@@ -18,7 +18,7 @@ if (isset($_GET['data'])) {
     
         // Insert the data into the database
         $sql = "INSERT INTO `customer` (`customer_id`, `cus_firstname`, `cus_lastname`, `email`, `password`) VALUES
-                ('', '$username', '$lastname', '$email', '$hashedPassword')";
+                ('', '$username', '$lastname', '$email', '$password')";
     
         if ($conn_db->query($sql) === TRUE) {
             $response = array('status' => 'success', 'message' => 'Registration successful!');

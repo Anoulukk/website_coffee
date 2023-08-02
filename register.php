@@ -48,37 +48,13 @@ session_start();
                         <small>eror message</small>
 
                     </div>
-            <button type="submit">ลงทเบียน</button>
 
                     <button type="submit" name="submit" value="register" class="btn btn-outline-primary">register</button>
 
                     
 
                 </form>
-                
-  <?php 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $lastname = $_POST["lastname"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    // Extract other properties as needed
-    $password=hash('sha512',$password);
-    
-    // Insert the data into the database
-    $sql = "INSERT INTO `customer`(`customer_id`, `cus_firstname`, `cus_lastname`, `email`, `password`) VALUES
-                                 ('','$username','$lastname','$email','$password')";
-    // Modify the SQL query as per your database table structure and data
 
-    if ($conn_db->query($sql) === TRUE) {
-        //echo "Registration successful!";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn_db->error;
-    }
-}
-
-$conn_db->close();
-?>
             </div>
 
         </div>
