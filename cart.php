@@ -136,7 +136,7 @@ WHERE p.parent_id = 1";
                 </div>
             </div>
             <div class="col">
-                2 of 2
+                
             </div>
         </div>
     </div>
