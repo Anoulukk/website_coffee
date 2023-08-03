@@ -8,7 +8,7 @@ include('config.php');
 
 
 <body>
-    <div class="container" hidden>
+    <div class="container" >
         <div class="row">
             <?php
 

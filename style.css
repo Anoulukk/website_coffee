@@ -214,3 +214,8 @@ border-radius: 20px;
     .hover-image:hover + .image-description {
       opacity: 1;
     }
+    @media (min-width: 1025px) {
+      .h-custom {
+      height: 100vh !important;
+      }
+      }
