@@ -1,7 +1,8 @@
 <title>Document</title>
 <?php
 include('footerheader.php');
-include('config.php'); ?>
+include('config.php'); 
+?>
 <link rel="stylesheet" href="style.css">
 
 
@@ -17,25 +18,31 @@ if (isset($_POST['btn'])) {
     $data = $_POST['txt_search'];
     header("location:search.php?keyword=$data");
 } else {
+<<<<<<< HEAD
     $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
     FROM product p
     JOIN parent c ON p.parent_id = c.parent_id";
+=======
+   
+
+>>>>>>> b9d33b340cdf934474754e5d0022c6b330785a91
 }
 
             $result = mysqli_query($conn_db, $sql);
             $no = 1;
             while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-3 box">
-
-                    <div class="img">
-                        <img src="img/<?php echo $row['picture'] ?>" alt="">
-                    </div>
+                    
+                <div class="img">
+            <img src="img/<?php echo $row['picture'] ?>" alt="Image" class="hover-image">
+            <div class="image-description"><?php echo $row['description'] ?></div>
+          </div>
 
                     <div class="product_name">
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['category_name'] ?>
+                        <?php echo $row['parent_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ
