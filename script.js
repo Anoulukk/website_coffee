@@ -140,3 +140,10 @@ var loggedIn = true; // Replace 'true' with your actual login status check
     loginButton.style.display = 'inline-block';
     logoutButton.style.display = 'none';
   }
+
+  const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
