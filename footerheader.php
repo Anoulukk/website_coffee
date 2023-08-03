@@ -10,6 +10,20 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    /* Custom primary button color */
+    .btn-custom {
+        color: #7C492D;
+        border-color: #7C492D;
+    }
+
+    /* Custom primary button color on hover */
+    .btn-custom:hover {
+        color: #fff;
+        background-color: #7C492D; /* Darker shade of orange on hover */
+        border-color: #fff;
+    }
+</style>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
     <div class="container-sm">
@@ -52,7 +66,7 @@
           <input class="form-control col" type="text" placeholder="Search Menu" aria-label="Search" name="txt_search">
         </div>
         <div class="col">
-          <input type="submit" value="search" name="btn" class="btn btn-primary mb-3 ">
+          <input type="submit" value="search" name="btn" class="btn btn-custom mb-3 ">
         </div>
         <div class="cart">
           <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
@@ -67,10 +81,10 @@
         
         if ($logged_in) {
           // If logged in, show the logout button
-          echo '<a href="logout.php" class="btn btn-primary mb-3">Logout</a>';
+          echo '<a href="logout.php" class="btn btn-custom mb-3">Logout</a>';
         } else {
           // If not logged in, show the login button
-          echo '<a href="login.php" class="btn btn-primary mb-3">Login</a>';
+          echo '<a href="login.php" class="btn btn-custom mb-3">Login</a>';
         }
         ?>
       </div>

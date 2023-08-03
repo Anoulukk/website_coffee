@@ -1,6 +1,3 @@
-
-<?php include('footerheader.php');?>
-
 <body>
 
     <?php
@@ -17,8 +14,8 @@
             FROM parent p
             JOIN product pr ON p.parent_id = pr.parent_id
             WHERE pr.pro_name LIKE '$datas%'ORDER BY pro_name DESC";
-            
-             if (isset($_POST['btn'])) {
+
+            if (isset($_POST['btn'])) {
                 $data = $_POST['txt_search'];
                 header("location:search.php?keyword=$data");
             }
@@ -28,9 +25,12 @@
             $no = 1;
             while ($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-3 box">
+
                     <div class="img">
-                        <img src="img/<?php echo $row['picture'] ?>" alt="">
+                        <img src="img/<?php echo $row['picture'] ?>" alt="Image" class="hover-image">
+                        <div class="image-description"><?php echo $row['description'] ?></div>
                     </div>
+
                     <div class="product_name">
                         <?php echo $row['pro_name'] ?>
                     </div>
@@ -38,11 +38,11 @@
                         <?php echo $row['parent_name'] ?>
                     </div>
                     <div class="price">
-                        ລາຄາ <?php echo $row['price'] ?> ກີບ
+                        ລາຄາ <?php echo number_format($row['price']) ?> ກີບ
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-primary">buy</a>
+                        <a href="cart.php" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>
@@ -55,4 +55,3 @@
         </div>
     </div>
 </body>
-
