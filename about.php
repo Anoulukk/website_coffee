@@ -14,7 +14,7 @@
       <div class="container text-center">
   <div class="row">
     <div class="col">
-      
+    
     </div>
     <div class="col">
     Thank you for your interest in Cafe Coffee Day. We are glad to expand our existing (Company owned or company operated) cafes. However, We do NOT franchise.We would be glad to partner with you, if you own a commercial or commercially converted/convertible retail space on a rental/revenue share basis with the following specifications:

@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="button">
-                        <a href="cart`.php" class="btn btn-primary">details</a>
+                        <a href="cart.php" class="btn btn-primary">buy</a>
                     </div>
                 </div>
             <?php } ?>
