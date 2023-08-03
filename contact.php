@@ -18,31 +18,65 @@
     <div class="col">
     <h5 class="card-title">Send message</h5>
     <form class="row g-3">
-  <div class="col-md-6">
+  <div class="col-12">
     <label for="inputEmail4" class="form-label">Email</label>
     <input type="email" class="form-control" id="inputEmail4">
   </div>
-  <div class="col-md-6">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword4">
-  </div>
+  
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="inputAddress" placeholder="">
   </div>
   <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2" class="form-label">Type of comment</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="">
   </div>
   <div class="col-md-6">
-    <label for="inputCity" class="form-label">City</label>
-    <input type="text" class="form-control" id="inputCity">
+    <label for="inputCity" class="form-label">province</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose provine</option>
+      <option id="bokeo">Bokeo province</option>
+      <option>Attapeu province</option>
+      <option>Bolikhamxai province</option>
+      <option>Champasak province</option>
+      <option>Houaphanh province</option>
+      <option>Khammouane province</option>
+      <option>Luang Namtha province</option>
+      <option>Luang Prabang province</option>
+      <option>Oudomxay province</option>
+      <option>Phongsaly province</option>
+      <option>Salavan province</option>
+      <option>Savannakhet province</option>
+      <option>Vientiane province</option>
+      <option>Vientiane Prefecture</option>
+      <option>Sainyabuli province</option>
+      <option>Sekong province</option>
+      <option>Xaisomboun province</option>
+      <option>Xiangkhouang province</option>
+    </select>
   </div>
   <div class="col-md-4">
-    <label for="inputState" class="form-label">State</label>
+    <label for="inputState" class="form-label">ditric</label>
     <select id="inputState" class="form-select">
-      <option selected>Choose...</option>
-      <option>...</option>
+      <option selected>Choose provine</option>
+      <option >Bokeo province</option>
+      <option>Attapeu province</option>
+      <option>Bolikhamxai province</option>
+      <option>Champasak province</option>
+      <option>Houaphanh province</option>
+      <option>Khammouane province</option>
+      <option>Luang Namtha province</option>
+      <option>Luang Prabang province</option>
+      <option>Oudomxay province</option>
+      <option>Phongsaly province</option>
+      <option>Salavan province</option>
+      <option>Savannakhet province</option>
+      <option>Vientiane province</option>
+      <option>Vientiane Prefecture</option>
+      <option>Sainyabuli province</option>
+      <option>Sekong province</option>
+      <option>Xaisomboun province</option>
+      <option>Xiangkhouang province</option>
     </select>
   </div>
   <div class="col-md-2">
