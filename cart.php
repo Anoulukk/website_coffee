@@ -16,7 +16,7 @@ include('footerheader.php');
                         <div class="container text-center">
                             <div class="row">
                                 <div class="col"><br>
-                                    <a href="" button type="button"
+                                    <a href="#button1" button type="button"
                                         class="btn btn-outline-secondary">Coffee</button></a>
                                 </div>
                                 <div class="col"><br>
@@ -90,7 +90,7 @@ WHERE p.parent_id = 1";
                                 class="btn btn-outline-secondary">Coffee</button></a>
                         </div>
                         <div class="col"><br>
-                            <a href="" button type="button"
+                            <a href="#button2" button type="button"
                                 class="btn btn-outline-secondary">Cookie</button></a>
                         </div>
                         <div class="col"><br>
