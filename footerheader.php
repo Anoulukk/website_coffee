@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
   <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
@@ -18,8 +16,7 @@
       <a class="navbar-brand" href="index.html">
         <img src="./img/158 1.svg" alt="" class="logo">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
-        aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -60,15 +57,28 @@
         <div class="cart">
           <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
         </div>
-        <li class="nav-item">
-          <a class="btn btn-primary mb-3" href="login.php">Login</a>
-        </li>
       </form>
+      <div class="login-logout-buttons">
+        <?php
+        session_start(); // Start the session
+
+        // Check if the user is logged in (you should implement this logic based on your backend)
+        $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'];
+        
+        if ($logged_in) {
+          // If logged in, show the logout button
+          echo '<a href="logout.php" class="btn btn-primary mb-3">Logout</a>';
+        } else {
+          // If not logged in, show the login button
+          echo '<a href="login.php" class="btn btn-primary mb-3">Login</a>';
+        }
+        ?>
+      </div>
+
+      
     </div>
   </nav>
 </header>
-
-
-
+<script src="script.js"></script>
 
 </html>

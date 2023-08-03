@@ -125,3 +125,18 @@ function sendDataToServer() {
     window.location.href = `http://localhost/loginsas/insert_data.php?data=${JSON.stringify(data)}`
     console.log(data);
 }
+
+var loggedIn = true; // Replace 'true' with your actual login status check
+
+  // Get references to the login and logout buttons
+  var loginButton = document.getElementById('loginButton');
+  var logoutButton = document.getElementById('logoutButton');
+
+  // Toggle button visibility based on the login status
+  if (loggedIn) {
+    loginButton.style.display = 'none';
+    logoutButton.style.display = 'inline-block';
+  } else {
+    loginButton.style.display = 'inline-block';
+    logoutButton.style.display = 'none';
+  }

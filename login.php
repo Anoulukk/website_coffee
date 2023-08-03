@@ -2,7 +2,6 @@
 <?php
 include('config.php'); 
 include ('footerheader.php');
-session_start();
 
 ?>
 <body>
@@ -23,7 +22,12 @@ session_start();
         <input type="submit" name="submit" value="login" class="btn btn-primary">
       </form>
               <a href="register.php">Don't have an account? Sign up</a>
-   
+              <?php
+  // Display the error message if set
+  if (isset($error_message)) {
+    echo '<p>' . $error_message . '</p>';
+  }
+  ?>
             <br>
           </div>
         </div>
