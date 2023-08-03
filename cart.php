@@ -58,8 +58,8 @@ WHERE p.parent_id = 1";
                                 </div>
 
                                 <div class="button">
-                                    <a href="location.php" class="btn btn-outline-primary">buy now</a>
-                                </div>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+</div>
                             </div>
                         <?php } ?>
 
@@ -68,6 +68,16 @@ WHERE p.parent_id = 1";
                 </div>
             </div>
             <div class="col">
+            <div class="cart-box-container" id="cartBoxContainer" style="display:none;">
+        <h2>Cart</h2>
+        <table class="cart-table">
+            <thead>
+              
+            </thead>
+            <tbody id="cartItems"></tbody>
+        </table><br>    
+        <div id="totalPrice"></div>
+    </div>
 
             </div>
         </div>
@@ -124,9 +134,10 @@ WHERE p.parent_id = 2";
                                     <?php echo number_format($row['price']) ?> ກີບ
                                 </div>
 
+
                                 <div class="button">
-                                    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary">buy now</a>
-                                </div>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+</div>
                             </div>
                         <?php } ?>
 
@@ -135,7 +146,7 @@ WHERE p.parent_id = 2";
                 </div>
             </div>
             <div class="col">
-                2 of 2
+           
             </div>
         </div>
     </div>
@@ -158,6 +169,7 @@ WHERE p.parent_id = 2";
                                 </div>
                             </div>
                         </div>
+
                         <?php
 
                         $sql = "SELECT p.parent_id, p.pr_name AS parent_name, 
@@ -190,8 +202,8 @@ WHERE p.parent_id = 3";
                                 </div>
 
                                 <div class="button">
-                                    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">buy now</a>
-                                </div>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+</div>
                             </div>
                         <?php } ?>
 
@@ -200,7 +212,7 @@ WHERE p.parent_id = 3";
                 </div>
             </div>
             <div class="col">
-                2 of 2
+            
             </div>
 
         </div>
@@ -249,7 +261,77 @@ WHERE p.parent_id = 3";
         </div>
     </div>
 </body>
+ <script>
+  var cartItemsData = {};
 
+// Function to add items to the cart
+function addToCart(productName, price) {
+    // Check if the product is already in the cart
+    if (cartItemsData[productName]) {
+        cartItemsData[productName].quantity += 1;
+    } else {
+        cartItemsData[productName] = {
+            price: price,
+            quantity: 1,
+        };
+    }
+
+    // Update the cart box content
+    updateCartBoxContent();
+
+    var cartBoxContainer = document.getElementById('cartBoxContainer');
+    cartBoxContainer.style.display = 'block'; // Show the cart box when the first item is added
+}
+
+    // Function to update the cart box content
+    function updateCartBoxContent() {
+        var cartItems = document.getElementById('cartItems');
+        cartItems.innerHTML = '';
+
+        var total = 0;
+        var tableContent = '<tr><th>Product Name</th><th>Price</th><th>Quantity</th><th></th></tr>';
+
+        for (var productName in cartItemsData) {
+            var row = `
+                <tr>
+                    <td>${productName}</td>
+                    <td>${cartItemsData[productName].price} ກີບ</td>
+                    <td>${cartItemsData[productName].quantity}</td>
+                    <td>
+                        <button onclick="decreaseQuantity('${productName}')">-</button>
+                        <button onclick="removeFromCart('${productName}')">Remove</button>
+                    </td>
+                </tr>`;
+            tableContent += row;
+            total += cartItemsData[productName].price * cartItemsData[productName].quantity;
+        }
+
+        cartItems.innerHTML = tableContent;
+
+        // Display the total price
+        var totalPriceElement = document.getElementById('totalPrice');
+        totalPriceElement.innerHTML = `Total Price: ${formatPrice(total)} ກີບ`;
+    }
+
+    // Function to format the price with commas for thousands separators
+    function formatPrice(price) {
+        return price.toLocaleString('en-US');
+    }
+
+// Function to decrease the quantity of a product in the cart
+function decreaseQuantity(productName) {
+    if (cartItemsData[productName].quantity > 1) {
+        cartItemsData[productName].quantity -= 1;
+        updateCartBoxContent();
+    }
+}
+
+// Function to remove a product from the cart
+function removeFromCart(productName) {
+    delete cartItemsData[productName];
+    updateCartBoxContent();
+}
+    </script>
 <div class="flex">
     <li><a href="home.php">Home</a></li>
     <li><a href="about.php">About Us</a></li>
