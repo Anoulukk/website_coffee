@@ -1,7 +1,7 @@
 <?php 
   include ('config.php');
   include('footerheader.php');
-session_start();
+
 ?>
 
 <!DOCTYPE html>
