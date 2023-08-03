@@ -40,7 +40,7 @@ include('config.php'); ?>
                     </div>
 
                     <div class="button">
-                        <a href="cart.php?id=<?=$row['pro_id']?>" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php" class="btn btn-outline-primary">buy</a>
                     </div>
                 </div>
             <?php } ?>

@@ -11,11 +11,16 @@ include('config.php'); ?>
         <div class="row">
             <?php
 
-            $sql = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
-            FROM product p
-            JOIN parent c ON p.parent_id = c.parent_id";
 
 
+if (isset($_POST['btn'])) {
+    $data = $_POST['txt_search'];
+    header("location:search.php?keyword=$data");
+} else {
+    $select_pro = "SELECT p.*, c.parent_id AS category_id, c.parent_id, c.pr_name AS category_name
+    FROM product p
+    JOIN parent c ON p.parent_id = c.parent_id";
+}
 
             $result = mysqli_query($conn_db, $sql);
             $no = 1;
@@ -80,7 +85,7 @@ WHERE p.parent_id = 1";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php" class="btn btn-outline-primary">buy</a>
                     </div>
                 </div>
             <?php } ?>
