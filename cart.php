@@ -58,7 +58,7 @@ WHERE p.parent_id = 1";
                                 </div>
 
                                 <div class="button">
-    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
 </div>
                             </div>
                         <?php } ?>
@@ -70,15 +70,18 @@ WHERE p.parent_id = 1";
             <div class="col">
             <div class="cart-box-container" id="cartBoxContainer" style="display:none;">
         <h2>Cart</h2>
+        <div class="cart-items">
         <table class="cart-table">
             <thead>
               
             </thead>
             <tbody id="cartItems"></tbody>
-        </table><br>    
-        <div id="totalPrice"></div>
-    </div>
+        </table>
+        </div><br>    
+        <div id="totalPrice"></div><br>
+        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="hideCartContainer()">Check Out</button>
 
+    </div>
             </div>
         </div>
     </div>
@@ -136,7 +139,7 @@ WHERE p.parent_id = 2";
 
 
                                 <div class="button">
-    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
 </div>
                             </div>
                         <?php } ?>
@@ -202,7 +205,7 @@ WHERE p.parent_id = 3";
                                 </div>
 
                                 <div class="button">
-    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
+    <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', <?php echo $row['price']; ?>)">buy now</a>
 </div>
                             </div>
                         <?php } ?>
@@ -221,7 +224,10 @@ WHERE p.parent_id = 3";
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">enter your Address</h5>
+                    <h5 class="modal-title">Enter your address
+                    </h5>
+                    <p class="modal-title">(please verify that you are logged in)</p>
+
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -253,8 +259,8 @@ WHERE p.parent_id = 3";
     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit Order</button>
+                    <button type="button" class="btn btn-custom" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-custom">Submit Order</button>
                 </div>
                 </form>
             </div>
@@ -331,6 +337,12 @@ function removeFromCart(productName) {
     delete cartItemsData[productName];
     updateCartBoxContent();
 }
+    // Function to hide the cart container
+    function hideCartContainer() {
+        var cartBoxContainer = document.getElementById('cartBoxContainer');
+        cartBoxContainer.style.display = 'none';
+    }
+
     </script>
 <div class="flex">
     <li><a href="home.php">Home</a></li>
