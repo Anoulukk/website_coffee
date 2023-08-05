@@ -11,88 +11,83 @@
       <div class="container text-center">
   <div class="row">
     <div class="col">
-      <img src="img/158 1.svg" class="float" alt="...">
+    <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+   
+    
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12">
+            <div class="card-content">
+                <div class="card-body"> <a href="https://maps.app.goo.gl/XXVmZAJH65tmsitr8"i class="fa-solid fa-location-dot fa-2xl"></i></a>
+                
+                    <div class="shadow"></div><br>
+                    <div class="card-title"> Address </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"></small> </p>
+                    </div>
+                </div>              
+            </div>
+        </div>
     </div>
-    <div class="col">
+</div>
+<div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+   
+    
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12">
+            <div class="card-content">
+                <div class="card-body"> <i class="fa-regular fa-envelope fa-2xl"></i>
+                    <div class="shadow"></div>
+                    <div class="card-title"> Email </div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"></small> </p>
+                    </div>
+                </div>              
+            </div>
+        </div>
     </div>
-    <div class="col">
+</div>
+<div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
+   
+    
+    <div class="row" style="justify-content: center">
+        <div class="card col-md-3 col-12">
+            <div class="card-content">
+                <div class="card-body"> <i class="fa-solid fa-phone fa-2xl"></i>
+                    <div class="shadow"></div>
+                    <div class="card-title"> tel:</div>
+                    <div class="card-subtitle">
+                        <p> <small class="text-muted"></small> </p>
+                    </div>
+                </div>              
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="col"><br>
     <h5 class="card-title">Send message</h5>
     <form class="row g-3">
+    <div class="col-12">
+    <label for="inputEmail4" class="form-label">Fullname</label>
+    <input type="text" class="form-control" id="name"placeholder="Enter name"name="name">
+  </div>
   <div class="col-12">
     <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4">
+    <input type="email" class="form-control" id="email"placeholder="Enter your email"name="email">
   </div>
   
   <div class="col-12">
     <label for="inputAddress" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="">
+    <input type="text" class="form-control" id="address" placeholder="Address"name="address">
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Type of comment</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="">
+    <textarea name="message" id="message" cols="30" rows="10"class="form-control"placeholder="Type of comment"></textarea>
   </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">province</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose provine</option>
-      <option id="bokeo">Bokeo province</option>
-      <option>Attapeu province</option>
-      <option>Bolikhamxai province</option>
-      <option>Champasak province</option>
-      <option>Houaphanh province</option>
-      <option>Khammouane province</option>
-      <option>Luang Namtha province</option>
-      <option>Luang Prabang province</option>
-      <option>Oudomxay province</option>
-      <option>Phongsaly province</option>
-      <option>Salavan province</option>
-      <option>Savannakhet province</option>
-      <option>Vientiane province</option>
-      <option>Vientiane Prefecture</option>
-      <option>Sainyabuli province</option>
-      <option>Sekong province</option>
-      <option>Xaisomboun province</option>
-      <option>Xiangkhouang province</option>
-    </select>
-  </div>
-  <div class="col-md-4">
-    <label for="inputState" class="form-label">ditric</label>
-    <select id="inputState" class="form-select">
-      <option selected>Choose provine</option>
-      <option >Bokeo province</option>
-      <option>Attapeu province</option>
-      <option>Bolikhamxai province</option>
-      <option>Champasak province</option>
-      <option>Houaphanh province</option>
-      <option>Khammouane province</option>
-      <option>Luang Namtha province</option>
-      <option>Luang Prabang province</option>
-      <option>Oudomxay province</option>
-      <option>Phongsaly province</option>
-      <option>Salavan province</option>
-      <option>Savannakhet province</option>
-      <option>Vientiane province</option>
-      <option>Vientiane Prefecture</option>
-      <option>Sainyabuli province</option>
-      <option>Sekong province</option>
-      <option>Xaisomboun province</option>
-      <option>Xiangkhouang province</option>
-    </select>
-  </div>
-  <div class="col-md-2">
-    <label for="inputZip" class="form-label">Zip</label>
-    <input type="text" class="form-control" id="inputZip">
-  </div>
+  
   <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
-  </div>
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Send now</button>
+    <button type="submit" class="btn btn-primary"id="btna">Send now</button>
   </div>
 </form>
     </div>
@@ -105,8 +100,43 @@
     </div>
   </div>
   <script src="script.js"></script>
+  
 
 </body>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+  var btna=document.getElementById('btna');
+btna.addEventListener('click',function(e){
+    e.preventDefault()
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var address=document.getElementById('address').value;
+    var message=document.getElementById('message').value;
+    var body='name:'+name+'<br/> email:'+email+'<br/> address :'+address+'<br/> message:'+message;
+    
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "tarcoinbit@gmail.com",
+    Password : "725433D77FD5782421713333FA3E5E20B8B3",
+    To : 'tinartiktok1@gmail.com',
+    From :"tarcoinbit@gmail.com",
+    Subject : address,
+    Body : body
+}).then(
+  message => alert(message)
+);
+})
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <footer>
 <li><a href="home.php">Home</a></li>
 <li><a href="about.php">About Us</a></li>

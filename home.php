@@ -103,6 +103,10 @@ WHERE p.parent_id = 1";
 
 
 </body>
+<br>
+<br>
+<br>
+<br>
 <div class="flex">
     <li><a href="home.php">Home</a></li>
     <li><a href="about.php">About Us</a></li>
