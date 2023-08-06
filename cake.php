@@ -40,7 +40,7 @@ include('config.php'); ?>
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-outline-custom">buy</a>
+                        <a href="cart.php" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>

@@ -48,7 +48,7 @@ WHERE p.parent_id = 1";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom">buy</a>
+                        <a href="cart.php" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>
@@ -64,7 +64,7 @@ WHERE p.parent_id = 1";
 pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
 FROM parent p
 JOIN product pr ON p.parent_id = pr.parent_id
-WHERE p.parent_id = 1";
+WHERE p.parent_id = 2";
 
 
 
