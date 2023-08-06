@@ -48,7 +48,7 @@ WHERE p.parent_id = 1";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-custom">buy</a>
+                        <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>
@@ -90,7 +90,7 @@ WHERE p.parent_id = 2";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-custom">buy</a>
+                        <a href="cart.php" class="btn btn-outline-primary">buy</a>
                     </div>
                 </div>
             <?php } ?>
@@ -102,7 +102,11 @@ WHERE p.parent_id = 2";
     <script src="script.js"></script>
 
 
-</body><br>
+</body>
+<br>
+<br>
+<br>
+<br>
 <div class="flex">
     <li><a href="home.php">Home</a></li>
     <li><a href="about.php">About Us</a></li>

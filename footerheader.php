@@ -27,7 +27,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
     <div class="container-sm">
-      <a class="navbar-brand" href="home.php">
+      <a class="navbar-brand" href="index.html">
         <img src="./img/158 1.svg" alt="" class="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
