@@ -72,7 +72,6 @@ while($row=mysqli_fetch_array($result8)){ ;
 ***ກະລຸນາໂອນເງີນພາຍໃນ 7 ວັນ ຫຼັງຈາກສັ່ງຊື້ແລ້ວ***
 <br><br>
 <a href="cart.php" class="btn btn-success">back</a>
-<a href="#" class="btn btn-success">Confirm</a>
 <button onclick="window.print()" class="btn btn-success">print</button>
 </div>
   </div>
