@@ -22,6 +22,8 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 ສະແດງຂໍ້ມູນການສັ່ງຊື້ສິນຄ້າ (ຍັງບໍ່ທັນຈ່າຍ)
+                                <a href="logout.php" ><button class="btn btn-secondary"> logout</button></a>
+
                                 <div>
                                     <br>
                                 <a href="report_order_yes.php"><button type="button" class="btn btn-outline-success">ຈ່າຍແລ້ວ</button></a>
@@ -82,7 +84,7 @@ while($row = mysqli_fetch_array($result)){
                                             <td><a href="report_order_detail.php?id=<?=$row['order_id']?>" class="btn btn-success">ລາຍລະອຽດ</a></td>
 
                                             <td><a href="pay_order.php?id=<?=$row['order_id']?>" class="btn btn-warning" 
-                                            onclick="del1(this.href); return false;">ປັບສະຖານະ</a></td>
+                                            onclick="del1(this.href); return false;">ປັບສະຖານະເປັນຈ່າຍແລ້ວ</a></td>
 
                           
                                              <?php

@@ -54,9 +54,11 @@ $sql="SELECT * FROM tb_order t, order_bill d, product p WHERE t.order_id=d.order
 AND d.pro_id=p.pro_id AND d.order_id='$ids'
 order by d.pro_id DESC ";
 $sum_total=0;
+$cus_name="";
 $result=mysqli_query($conn_db,$sql);
 while($row = mysqli_fetch_array($result)){
     $sum_total+=$row['total'];
+    $cus_name=$row['cus_name'];
 ?>
                                         <tr>
                                             <td><?=$row['id']?></td>
@@ -72,6 +74,8 @@ while($row = mysqli_fetch_array($result)){
                                     ?>
                                         </tr> 
                                     </tbody>
+                                    <b>ຊື່ລູກຄ້າ : <?=$cus_name?></b>
+<br>
                                     <b>ລາຄາລວມ : <?=number_format($sum_total)?>ກີບ</b>
                                    
                                 </table>
