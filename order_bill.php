@@ -38,7 +38,7 @@ if (mysqli_query($conn_db, $insertAddressQuery)) {
     $addressId = mysqli_insert_id($conn_db);
 
     // Insert the order details into the order_bill table along with the address_id and ChargeDate
-    $insertOrderQuery = "INSERT INTO `order_bill` (`id`, `order_id`, `pro_id`, `customer_id`, `price`, `qty`, `total`, `address_id`, `ChargeDate`, `status_id`)
+    $insertOrderQuery = "INSERT INTO `order_bill` (`id`, `order_id`, `pro_id`, `customer_id`, `price`, `qty`, `total`, `address_id`, `ChargeDate`,`shipdate`, `status_id`)
     VALUES ";
     $values = array();
     for ($i = 0; $i < count($pronameArray); $i++) {
@@ -46,7 +46,7 @@ if (mysqli_query($conn_db, $insertAddressQuery)) {
         $price = $priceArray[$i];
         $qty = $quantityArray[$i];
         $totalPrice = $price * $qty;
-        $values[] = "('', '" .$_SESSION["order_id"]. "', '$pro_id', '$customer_id', '$price', '$qty', '$totalPrice', '$addressId', NOW(), 1)";
+        $values[] = "('', '" .$_SESSION["order_id"]. "', '$pro_id', '$customer_id', '$price', '$qty', '$totalPrice', '$addressId', NOW(),'NULL', 1)";
     }
     $insertOrderQuery .= implode(',', $values);
 
@@ -56,8 +56,7 @@ if (mysqli_query($conn_db, $insertAddressQuery)) {
        $sql3="update product set stock=stock -'$quantityArray[$i]'
             WHERE pro_id=' $pro_idArray[$i]'";
             mysqli_query($conn_db,$sql3);
-        $sql4="INSERT INTO `shipment`(`shipment_id`, `order_id`, `ChargeDate`, `Shipdate`) VALUES
-                                     ('','" .$_SESSION["order_id"]. "','NOW()','')";
+
         echo "Order inserted successfully!";
         echo "<script> window.location='orderbill_print.php';</script>";
     } 

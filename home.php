@@ -18,12 +18,11 @@ if (isset($_POST['btn'])) {
     $data = $_POST['txt_search'];
     header("location:search.php?keyword=$data");
 } else {
-    $sql = "SELECT p.parent_id, p.pr_name AS parent_name, 
-pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
-FROM parent p
-JOIN product pr ON p.parent_id = pr.parent_id
-WHERE p.parent_id = 1";
-
+    $sql = "SELECT c.cate_id, c.cate_name AS category_name,
+    pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
+    FROM category c
+JOIN product pr ON c.cate_id = pr.cate_id
+WHERE c.cate_id = 1";
 }
 
             $result = mysqli_query($conn_db, $sql);
@@ -40,7 +39,7 @@ WHERE p.parent_id = 1";
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['parent_name'] ?>
+                        <?php echo $row['category_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ
@@ -59,12 +58,11 @@ WHERE p.parent_id = 1";
     <div class="container">
         <div class="row">
             <?php
-
-            $sql = "SELECT p.parent_id, p.pr_name AS parent_name, 
-pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
-FROM parent p
-JOIN product pr ON p.parent_id = pr.parent_id
-WHERE p.parent_id = 2";
+    $sql = "SELECT c.cate_id, c.cate_name AS category_name,
+    pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
+    FROM category c
+JOIN product pr ON c.cate_id = pr.cate_id
+WHERE c.cate_id = 2";
 
 
 
@@ -82,7 +80,7 @@ WHERE p.parent_id = 2";
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['parent_name'] ?>
+                        <?php echo $row['category_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ
@@ -90,7 +88,7 @@ WHERE p.parent_id = 2";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>
