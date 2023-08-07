@@ -7,17 +7,14 @@
       Contact Us
     </div>
     <div class="card-body">
-
       <div class="container text-center">
   <div class="row">
     <div class="col">
     <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
-   
-    
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
             <div class="card-content">
-                <div class="card-body"> <a href="https://maps.app.goo.gl/XXVmZAJH65tmsitr8"i class="fa-solid fa-location-dot fa-2xl"></i></a>
+                <div class="card-body"> <a href="https://maps.apple.com/?ll=17.967629,102.643327&q=%E0%B8%AB%E0%B8%A1%E0%B8%B8%E0%B8%94%E0%B8%9B%E0%B8%B1%E0%B8%81&t=m"i class="fa-solid fa-location-dot fa-2xl"></i></a>
                 
                     <div class="shadow"></div><br>
                     <div class="card-title"> Address </div>
@@ -30,16 +27,15 @@
     </div>
 </div>
 <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
-   
-    
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
             <div class="card-content">
                 <div class="card-body"> <i class="fa-regular fa-envelope fa-2xl"></i>
                     <div class="shadow"></div>
                     <div class="card-title"> Email </div>
+    
                     <div class="card-subtitle">
-                        <p> <small class="text-muted"></small> </p>
+                        <p> <small class="text-muted">owenwowwow@gmail.com</small> </p>
                     </div>
                 </div>              
             </div>
@@ -47,8 +43,6 @@
     </div>
 </div>
 <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
-   
-    
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
             <div class="card-content">
@@ -56,14 +50,13 @@
                     <div class="shadow"></div>
                     <div class="card-title"> tel:</div>
                     <div class="card-subtitle">
-                        <p> <small class="text-muted"></small> </p>
+                        <p> <small class="text-muted">20 57896023</small> </p>
                     </div>
                 </div>              
             </div>
         </div>
     </div>
 </div>
-
     </div>
     <div class="col"><br>
     <h5 class="card-title">Send message</h5>
@@ -100,13 +93,10 @@
     </div>
   </div>
   <script src="script.js"></script>
-  
-
 </body>
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
-  var btna=document.getElementById('btna');
+var btna=document.getElementById('btna');
 btna.addEventListener('click',function(e){
     e.preventDefault()
     var name=document.getElementById('name').value;
@@ -114,6 +104,7 @@ btna.addEventListener('click',function(e){
     var address=document.getElementById('address').value;
     var message=document.getElementById('message').value;
     var body='name:'+name+'<br/> email:'+email+'<br/> address :'+address+'<br/> message:'+message;
+    swal("Success", "send information to coffee shop success", "success");
     
     Email.send({
     Host : "smtp.elasticemail.com",
@@ -123,11 +114,13 @@ btna.addEventListener('click',function(e){
     From :"tarcoinbit@gmail.com",
     Subject : address,
     Body : body
-}).then(
-  message => alert(message)
-);
+    
+   
+})
 })
 </script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 <br>
 <br>
 <br>

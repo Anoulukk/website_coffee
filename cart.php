@@ -12,6 +12,7 @@ include('footerheader.php');
 
 
 <body>
+    
     <div class="container text-center" id="button1">
 
         <div class="row">
@@ -32,6 +33,7 @@ include('footerheader.php');
                             </div>
                         </div>
                         <?php
+                        
 
                         $sql = "SELECT p.parent_id, p.pr_name AS parent_name, 
 pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
