@@ -46,7 +46,7 @@ if (mysqli_query($conn_db, $insertAddressQuery)) {
         $price = $priceArray[$i];
         $qty = $quantityArray[$i];
         $totalPrice = $price * $qty;
-        $values[] = "('', '" .$_SESSION["order_id"]. "', '$pro_id', '$customer_id', '$price', '$qty', '$totalPrice', '$addressId', NOW(),'NULL', 1)";
+        $values[] = "('', '" .$_SESSION["order_id"]. "', '$pro_id', '$customer_id', '$price', '$qty', '$totalPrice', '$addressId', NOW(),NULL, 1)";
     }
     $insertOrderQuery .= implode(',', $values);
 
