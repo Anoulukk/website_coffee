@@ -4,7 +4,7 @@ $ids=$_GET['id'];
 
 $sql="UPDATE tb_order SET order_status = 2 WHERE order_id='$ids' ";
 $result=mysqli_query($conn_db,$sql);
-$sql2="UPDATE order_bill SET shipdate = NOW() WHERE order_id='$ids' ";
+$sql2="UPDATE order_bill SET shipdate = NOW(),`status_id`=2 WHERE order_id='$ids' ";
 $result=mysqli_query($conn_db,$sql2);
 if($result){
 
