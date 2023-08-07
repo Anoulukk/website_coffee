@@ -56,7 +56,8 @@ if (mysqli_query($conn_db, $insertAddressQuery)) {
        $sql3="update product set stock=stock -'$quantityArray[$i]'
             WHERE pro_id=' $pro_idArray[$i]'";
             mysqli_query($conn_db,$sql3);
-    
+        $sql4="INSERT INTO `shipment`(`shipment_id`, `order_id`, `ChargeDate`, `Shipdate`) VALUES
+                                     ('','" .$_SESSION["order_id"]. "','NOW()','')";
         echo "Order inserted successfully!";
         echo "<script> window.location='orderbill_print.php';</script>";
     } 
