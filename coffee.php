@@ -38,7 +38,7 @@ include('config.php'); ?>
                     </div>
 
                     <div class="button">
-                        <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php?id=<?= $row['pro_id'] ?>" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>
@@ -80,7 +80,7 @@ WHERE p.parent_id = 1";
                     </div>
 
                     <div class="button">
-                        <a href="cart.php" class="btn btn-outline-primary">buy</a>
+                        <a href="cart.php" class="btn btn-custom">buy</a>
                     </div>
                 </div>
             <?php } ?>

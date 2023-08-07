@@ -27,7 +27,7 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="Eleventh navbar example">
     <div class="container-sm">
-      <a class="navbar-brand" href="about.php">
+      <a class="navbar-brand" href="index.html">
         <img src="./img/158 1.svg" alt="" class="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,7 +69,7 @@
           <input type="submit" value="search" name="btn" class="btn btn-custom mb-3 ">
         </div>
         <div class="cart">
-          <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt=""></a>
+          <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt="" onclick="showCartContainer()" ></a>
         </div>
       </form>
       <div class="login-logout-buttons">
@@ -93,6 +93,5 @@
     </div>
   </nav>
 </header>
-<script src="script.js"></script>
 
 </html>

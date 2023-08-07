@@ -18,11 +18,11 @@ if (isset($_GET['data'])) {
     
         // Insert the data into the database
         $sql = "INSERT INTO `customer` (`customer_id`, `cus_firstname`, `cus_lastname`, `email`, `password`) VALUES
-                ('', '$username', '$lastname', '$email', '$password')";
+                ('', '$username', '$lastname', '$email', '$hashedPassword')";
     
         if ($conn_db->query($sql) === TRUE) {
-            $response = array('status' => 'success', 'message' => 'Registration successful!');
-            // echo json_encode($response);
+            header("Location: login.php");
+        exit();
         } else {
             $response = array('status' => 'error', 'message' => 'Error: ' . $sql . "<br>" . $conn->error);
             echo json_encode($response);
