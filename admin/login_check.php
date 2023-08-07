@@ -12,7 +12,7 @@ $row=mysqli_fetch_array($result);
 if($row > 0 ){
     $_SESSION["emp_username"]=$row['username'];
     $_SESSION["emp_password"]=$row['password'];
-    $_SESSION["cus_id"]=$row['id'];
+    $_SESSION["emp_id"]=$row['id'];
     $_SESSION["emp_firstname"]=$row['name'];
     $_SESSION["emp_lastname"]=$row['lastname'];
     $show=header("location:report_order.php");
