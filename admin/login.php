@@ -1,4 +1,6 @@
+
 <?php
+
 session_start();
 
 ?>
@@ -12,11 +14,47 @@ session_start();
     <script src="../bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
     <title>login</title>
 </head>
-<body>
-<div class="container "><br>
-  <div class="row text-center">
-    <div class="col-md-3">
-      <h5>Login</h5>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a href=""a href=""button type="button" class="btn btn-warning">Go website</button></a></a>
+  <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+    <div class="card">
+  
+</div>
+    </div>
+    <div class="col">
+     
+    </div>
+  </div>
+</div>
+  </div>
+</nav>
+<body><br>
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+      <h3>This is for admin</h3>
+    </div>
+    <div class="col">
+     
+    </div>
+  </div>
+</div>
+  
+<div class="container-sm">
+      <div class="login-container" id="login-container">
+        <div class="row text-center">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+          <h5>Login</h5>
       <form action="login_check.php" method="post">
         <input type="text" name="username" class="form-control" required placeholder="username">
         <input type="password" name="password" class="form-control" required placeholder="password">
@@ -28,12 +66,10 @@ session_start();
        ?> <br>
         <input type="submit" name="submit" value="login" class="btn btn-primary">
       </form>
-     
+          </div>
+        </div>
+      </div>
     </div>
-
-  </div>
-
-</div>
 
 </body>
 </html>
