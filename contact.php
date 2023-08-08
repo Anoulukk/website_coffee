@@ -4,7 +4,7 @@
 <body>
 <div class="card text-center">
     <div class="card-header">
-      Contact Us
+     <h4>Contact us</h4>
     </div>
     <div class="card-body">
       <div class="container text-center">
@@ -19,7 +19,7 @@
                     <div class="shadow"></div><br>
                     <div class="card-title"> Address </div>
                     <div class="card-subtitle">
-                        <p> <small class="text-muted"></small> </p>
+                        <p> <small class="text-muted">Asean mall</small> </p>
                     </div>
                 </div>              
             </div>
@@ -30,8 +30,8 @@
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
             <div class="card-content">
-                <div class="card-body"> <i class="fa-regular fa-envelope fa-2xl"></i>
-                    <div class="shadow"></div>
+                <div class="card-body"><a href="https://mail.google.com/mail/u/0/#inbox"i class="fa-regular fa-envelope fa-2xl"></a></i>
+                    <div class="shadow"></div><br>
                     <div class="card-title"> Email </div>
     
                     <div class="card-subtitle">
@@ -46,8 +46,8 @@
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
             <div class="card-content">
-                <div class="card-body"> <i class="fa-solid fa-phone fa-2xl"></i>
-                    <div class="shadow"></div>
+                <div class="card-body"> <a href="https://web.whatsapp.com/"i class="fa-solid fa-phone fa-2xl"></i></a>
+                    <div class="shadow"></div><br>
                     <div class="card-title"> tel:</div>
                     <div class="card-subtitle">
                         <p> <small class="text-muted">20 57896023</small> </p>

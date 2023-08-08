@@ -7,7 +7,22 @@ include('config.php');
 
 
 
-<body>
+<body><br>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col">
+     <h3> My phoduct</h3>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>
+    
     <div class="container" >
         <div class="row">
             <?php
@@ -96,6 +111,48 @@ WHERE c.cate_id = 2";
 
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <?php
+    $sql = "SELECT c.cate_id, c.cate_name AS category_name,
+    pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
+    FROM category c
+JOIN product pr ON c.cate_id = pr.cate_id
+WHERE c.cate_id = 3";
+
+
+
+            $result = mysqli_query($conn_db, $sql);
+            $no = 1;
+            while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="col-md-3 box">
+                    
+                <div class="img">
+            <img src="img/<?php echo $row['picture'] ?>" alt="Image" class="hover-image">
+            <div class="image-description"><?php echo $row['description'] ?></div>
+          </div>
+
+                    <div class="product_name">
+                        <?php echo $row['pro_name'] ?>
+                    </div>
+                    <div class="parent">
+                        <?php echo $row['category_name'] ?>
+                    </div>
+                    <div class="price">
+                        ລາຄາ
+                        <?php echo number_format($row['price']) ?> ກີບ
+                    </div>
+
+                    <div class="button">
+                        <a href="cart.php" class="btn btn-custom">buy</a>
+                    </div>
+                </div>
+            <?php } ?>
+
+
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 

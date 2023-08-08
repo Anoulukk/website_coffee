@@ -7,7 +7,7 @@
   
   <div class="card text-center">
     <div class="card-header">
-      about Us
+      <h4>About Us</h4>
     </div>
     <div class="card-body">
       <h5 class="card-title">About Us</h5>
