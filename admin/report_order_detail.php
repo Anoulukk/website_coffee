@@ -1,9 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION["cus_id"])){
-    $show=header("location:login.php");
-}
-?>
+
 <?php include('config.php'); 
 $ids=$_GET['id']?>
 <!DOCTYPE html>
@@ -63,9 +58,9 @@ while($row = mysqli_fetch_array($result)){
                                         <tr>
                                             <td><?=$row['id']?></td>
                                             <td><?=$row['pro_name']?></td>
-                                            <td><?=$row['total_price']?></td>
+                                            <td><?=$row['price']?></td>
                                             <td><?=$row['qty']?></td>
-                                            <td><?=$row['total']?> $</td>
+                                            <td><?=$row['total']?> ກີບ</td>
                
                                           
                                      <?php

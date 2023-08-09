@@ -1,5 +1,9 @@
 
-<?php include('footerheader.php');?>
+<?php include('footerheader.php');
+if (isset($_POST['btn'])) {
+    $data = $_POST['txt_search'];
+    header("location:search.php?keyword=$data");
+}?>
 
 <body>
 <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">

@@ -8,6 +8,7 @@ $total_price=$rs['total_price'];
 $sumprice1=number_format($total_price);
 
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,13 +70,47 @@ while($row=mysqli_fetch_array($result8)){ ;
 
 </div>
 <div class="text-center">
-***ກະລຸນາໂອນເງີນພາຍໃນ 7 ວັນ ຫຼັງຈາກສັ່ງຊື້ແລ້ວ***
+***ກະລຸນາກົດປຸ່ມ Print ເພີ່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
 <br><br>
-<a href="cart.php" class="btn btn-success">back</a>
-<button onclick="window.print()" class="btn btn-success">print</button>
+
+<button onclick="captureA()" class="btn btn-warning">print</button>
+
 </div>
   </div>
 
 
 </body>
+<script>
+  // (A) USING HTML2CANVAS
+function captureA () {
+  html2canvas(document.body).then(canvas => {
+    let a = document.createElement("a");
+    a.download = "myorder.png";
+    a.href = canvas.toDataURL("image/png");
+    a.click(); // MAY NOT ALWAYS WORK!
+  });
+}
+var btna=document.getElementById('btna');
+btna.addEventListener('click',function(e){
+    e.preventDefault()
+    var name=document.getElementById('name').value;
+    var email=document.getElementById('email').value;
+    var address=document.getElementById('address').value;
+    var message=document.getElementById('message').value;
+    var body='name:'+name+'<br/> email:'+email+'<br/> address :'+address+'<br/> message:'+message;
+    swal("Success", "send information to coffee shop success", "success");
+    
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "tarcoinbit@gmail.com",
+    Password : "725433D77FD5782421713333FA3E5E20B8B3",
+    To : 'tinartiktok1@gmail.com',
+    From :"tarcoinbit@gmail.com",
+    Subject : address,
+    Body : body
+    
+   
+})
+})
+</script>
 </html>

@@ -9,10 +9,10 @@
         <div class="row">
             <?php
             $datas = $_GET['keyword'];
-            $select_pro = "SELECT p.parent_id, p.pr_name AS parent_name, 
+            $select_pro = "SELECT p.cate_id, p.cate_name AS cate_name, 
             pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
-            FROM parent p
-            JOIN product pr ON p.parent_id = pr.parent_id
+            FROM category p
+            JOIN product pr ON p.cate_id = pr.cate_id
             WHERE pr.pro_name LIKE '$datas%'ORDER BY pro_name DESC";
 
             if (isset($_POST['btn'])) {
@@ -35,7 +35,7 @@
                         <?php echo $row['pro_name'] ?>
                     </div>
                     <div class="parent">
-                        <?php echo $row['parent_name'] ?>
+                        <?php echo $row['cate_name'] ?>
                     </div>
                     <div class="price">
                         ລາຄາ <?php echo number_format($row['price']) ?> ກີບ

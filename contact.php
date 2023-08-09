@@ -1,5 +1,9 @@
 
-<?php include('footerheader.php');?>
+<?php include('footerheader.php');
+if (isset($_POST['btn'])) {
+    $data = $_POST['txt_search'];
+    header("location:search.php?keyword=$data");
+}?>
 
 <body>
 <div class="card text-center">
@@ -94,41 +98,6 @@
   </div>
   <script src="script.js"></script>
 </body>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script>
-var btna=document.getElementById('btna');
-btna.addEventListener('click',function(e){
-    e.preventDefault()
-    var name=document.getElementById('name').value;
-    var email=document.getElementById('email').value;
-    var address=document.getElementById('address').value;
-    var message=document.getElementById('message').value;
-    var body='name:'+name+'<br/> email:'+email+'<br/> address :'+address+'<br/> message:'+message;
-    swal("Success", "send information to coffee shop success", "success");
-    
-    Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "tarcoinbit@gmail.com",
-    Password : "725433D77FD5782421713333FA3E5E20B8B3",
-    To : 'tinartiktok1@gmail.com',
-    From :"tarcoinbit@gmail.com",
-    Subject : address,
-    Body : body
-    
-   
-})
-})
-</script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 <footer>
 <li><a href="home.php">Home</a></li>

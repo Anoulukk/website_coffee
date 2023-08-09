@@ -294,3 +294,20 @@ var loggedIn = true; // Replace 'true' with your actual login status check
     }
 
   
+// Initialize the map
+var map = new google.maps.Map(document.getElementById('map-container'), {
+    center: { lat: DEFAULT_LATITUDE, lng: DEFAULT_LONGITUDE },
+    zoom: 14
+  });
+  
+  // Add a marker and update hidden inputs when user clicks on the map
+  map.addListener('click', function(event) {
+    var latitude = event.latLng.lat();
+    var longitude = event.latLng.lng();
+  
+    document.getElementById('latitude').value = latitude;
+    document.getElementById('longitude').value = longitude;
+  
+    // You can also perform reverse geocoding here to get the address
+    // and display it on the form if desired
+  });

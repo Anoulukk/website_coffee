@@ -67,7 +67,7 @@ while($row = mysqli_fetch_array($result)){
                                             <td><?=$row['cus_name']?></td>
                                             <td><?=$row['address']?></td>
                                             <td><?=$row['telephone']?></td>
-                                            <td><?=$row['total_price']?> $</td>
+                                            <td><?=$row['total_price']?> ກີບ</td>
                                             <td><?=$row['reg_date']?></td>
                                             <td>
                                                 <?php

@@ -1,5 +1,9 @@
 <title>Document</title>
-<?php include('footerheader.php'); ?>
+<?php include('footerheader.php'); 
+if (isset($_POST['btn'])) {
+  $data = $_POST['txt_search'];
+  header("location:search.php?keyword=$data");
+}?>
 
 </head>
 
