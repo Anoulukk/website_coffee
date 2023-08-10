@@ -2,6 +2,7 @@
 include('config.php');
 include('footerheader.php');
 ?>
+<title>cart</title>
 <link rel="stylesheet" href="style.css">
 <style>
     .modal.show #cartBoxContainer {
@@ -11,16 +12,20 @@ include('footerheader.php');
 
 
 
-<body>
+<!-- Start of the HTML body -->
 
+<body>
+    <!-- First container for Coffee category -->
     <div class="container text-center" id="button1">
 
         <div class="row">
             <div class="col">
+                <!-- Inner container for Coffee products -->
                 <div class="container">
                     <div class="row">
                         <div class="container text-center">
                             <div class="row">
+                                <!-- Buttons to navigate to different categories -->
                                 <div class="col"><br>
                                     <a href="#button1" button type="button" class="btn btn-outline-secondary">Coffee</button></a>
                                 </div>
@@ -32,8 +37,8 @@ include('footerheader.php');
                                 </div>
                             </div>
                         </div>
+                        <!-- PHP code to fetch and display Coffee products -->
                         <?php
-
 
                         $sql = "SELECT c.cate_id, c.cate_name AS category_name,
                         pr.pro_id, pr.pro_name, pr.price, pr.stock, pr.picture, pr.description
@@ -41,13 +46,11 @@ include('footerheader.php');
                        JOIN product pr ON c.cate_id = pr.cate_id
                        WHERE c.cate_id = 1";
 
-
-
-
                         $result = mysqli_query($conn_db, $sql);
                         $no = 1;
                         while ($row = mysqli_fetch_assoc($result)) {
                         ?>
+                            <!-- Individual product box -->
                             <div class="col-md-3 box">
 
                                 <div class="img">
@@ -64,46 +67,50 @@ include('footerheader.php');
                                     ລາຄາ
                                     <?php echo number_format($row['price']) ?> ກີບ
                                 </div>
-
+                                <!-- Adding to cart button -->
                                 <div class="button">
                                     <a href="cart.php" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', '<?php echo $row['price']; ?>','<?php echo $row['pro_id'] ?>',<?php echo $row['stock'] ?>)">add
                                         to cart</a>
                                 </div>
                             </div>
                         <?php } ?>
-
-
+                        <!-- End of Coffee products section -->
                     </div>
                 </div>
             </div>
             <div class="col">
+                <!-- Cart box container -->
                 <div class="cart-box-container" id="cartBoxContainer" style="display:none;">
+                    <!-- Cart content -->
                     <h2>Cart</h2>
                     <div class="cart-items">
                         <table class="cart-table">
                             <thead>
-
                             </thead>
                             <tbody id="cartItems"></tbody>
                         </table>
                     </div><br>
                     <div id="totalPrice"></div><br>
+                    <!-- Cart content -->
                     <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="hideCartContainer()">Check Out</button>
 
                 </div>
             </div>
         </div>
     </div>
+    <!-- End of Coffee category section -->
 
-
+    <!-- Second container for cookie category -->
     <div class="container text-center" id="button2">
 
         <div class="row">
             <div class="col">
+                <!-- Inner container for cookie products -->
                 <div class="container">
                     <div class="row">
                         <div class="container text-center">
                             <div class="row">
+                                <!-- Buttons to navigate to different categories -->
                                 <div class="col"><br>
                                     <a href="#button1" button type="button" class="btn btn-outline-secondary">Coffee</button></a>
                                 </div>
@@ -115,6 +122,7 @@ include('footerheader.php');
                                 </div>
                             </div>
                         </div>
+                        <!-- PHP code to fetch and display cookie products -->
                         <?php
 
                         $sql = "SELECT c.cate_id, c.cate_name AS category_name,
@@ -123,13 +131,11 @@ FROM category c
 JOIN product pr ON c.cate_id = pr.cate_id
 WHERE c.cate_id = 2";
 
-
-
-
                         $result = mysqli_query($conn_db, $sql);
                         $no = 1;
                         while ($row = mysqli_fetch_assoc($result)) {
                         ?>
+                            <!-- Individual product box -->
                             <div class="col-md-3 box">
 
                                 <div class="img">
@@ -147,13 +153,14 @@ WHERE c.cate_id = 2";
                                     <?php echo number_format($row['price']) ?> ກີບ
                                 </div>
 
-
+                                <!-- Adding to cart button -->
                                 <div class="button">
                                     <a href="cart.php" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', '<?php echo $row['price']; ?>','<?php echo $row['pro_id'] ?>',<?php echo $row['stock'] ?>)">add
                                         to cart</a>
                                 </div>
                             </div>
                         <?php } ?>
+                        <!-- End of cookie products section -->
 
 
                     </div>
@@ -164,14 +171,17 @@ WHERE c.cate_id = 2";
             </div>
         </div>
     </div>
+    <!-- Third container for cake category -->
     <div class="container text-center" id="button3">
 
         <div class="row">
             <div class="col">
+                <!-- Inner container for cake products -->
                 <div class="container">
                     <div class="row">
                         <div class="container text-center">
                             <div class="row">
+                                <!-- Buttons to navigate to different categories -->
                                 <div class="col"><br>
                                     <a href="#button1" button type="button" class="btn btn-outline-secondary">Coffee</button></a>
                                 </div>
@@ -183,7 +193,7 @@ WHERE c.cate_id = 2";
                                 </div>
                             </div>
                         </div>
-
+                        <!-- PHP code to fetch and display Coffee products -->
                         <?php
 
                         $sql = "SELECT c.cate_id, c.cate_name AS category_name,
@@ -192,15 +202,12 @@ FROM category c
 JOIN product pr ON c.cate_id = pr.cate_id
 WHERE c.cate_id = 3";
 
-
-
-
-
                         $result = mysqli_query($conn_db, $sql);
                         $no = 1;
                         while ($row = mysqli_fetch_assoc($result)) {
 
                         ?>
+                            <!-- Individual product box -->
                             <div class="col-md-3 box">
 
                                 <div class="img">
@@ -217,27 +224,26 @@ WHERE c.cate_id = 3";
                                     ລາຄາ
                                     <?php echo number_format($row['price']) ?> ກີບ
                                 </div>
-
+                                <!-- Adding to cart button -->
                                 <div class="button">
                                     <a href="cart.php" class="btn btn-custom" data-bs-toggle="modal" onclick="addToCart('<?php echo $row['pro_name']; ?>', '<?php echo $row['price']; ?>','<?php echo $row['pro_id'] ?>',<?php echo $row['stock'] ?>)">add
                                         to cart</a>
                                 </div>
                             </div>
                         <?php } ?>
-
-
+                        <!-- End of cake products section -->
                     </div>
                 </div>
             </div>
             <div class="col">
-
             </div>
-
         </div>
     </div>
+    <!-- Modal for entering address -->
     <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1" id="exampleModal">
         <div class="modal-dialog">
             <div class="modal-content">
+                <!-- Modal header and form -->
                 <div class="modal-header">
                     <h5 class="modal-title">Enter your address
                     </h5>
@@ -247,7 +253,7 @@ WHERE c.cate_id = 3";
                 </div>
                 <div class="modal-body">
                     <form action="order_bill.php" method="post">
-                    <div class="form-group">
+                        <div class="form-group">
                             <label for="street">Street:</label>
                             <input type="text" class="form-control" name="street" id="street" required>
                         </div>
@@ -284,6 +290,7 @@ WHERE c.cate_id = 3";
                         </div>
 
                 </div>
+                <!-- button close and submit order -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom" data-bs-dismiss="modal" onclick="showCartContainer()">Close</button>
                     <button type="submit" class="btn btn-custom">Submit Order</button>
@@ -292,9 +299,11 @@ WHERE c.cate_id = 3";
             </div>
         </div>
     </div>
+    <!-- run JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 <script src="script.js"></script>
+<!-- footer  -->
 <div class="flex">
     <li><a href="home.php">Home</a></li>
     <li><a href="about.php">About Us</a></li>

@@ -1,5 +1,11 @@
 <?php
 session_start();
+include('config.php');
+// if user is not login let direct to login page
+if (!$logged_in) {
+    header("Location: login.php");
+    exit;
+}
 // Check if the user is logged in (you should implement this logic based on your backend)
 $logged_in = isset($_SESSION["cus_firstname"]);
 $customer_id = $_SESSION["cus_id"];
@@ -18,15 +24,11 @@ $priceArray = explode(",", $_POST['price']); // Convert comma-separated string t
   $quantity = $_POST['quantity'];
 
 
-if (!$logged_in) {
-    header("Location: login.php");
-    exit;
-}
-include('config.php');
-
+//insert data to tb_order for collect sales data
 $sql="INSERT INTO tb_order(order_id,cus_name,address,telephone,total_price,order_status)
 values('','". $_SESSION["cus_firstname"] ."','$street ','$phone','$totalPrice   ','1')";
 mysqli_query($conn_db,$sql);
+// insert the order_id
 $order_id = mysqli_insert_id($conn_db);
 $_SESSION["order_id"] = $order_id;
 // Insert the shipping address into the address table

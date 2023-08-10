@@ -1,11 +1,12 @@
-
 <?php include('footerheader.php');
+// if user enter button search let send data to search.php
 if (isset($_POST['btn'])) {
     $data = $_POST['txt_search'];
     header("location:search.php?keyword=$data");
 }?>
 
 <body>
+        <!-- Card for the contact information -->
 <div class="card text-center">
     <div class="card-header">
      <h4>Contact us</h4>
@@ -13,7 +14,9 @@ if (isset($_POST['btn'])) {
     <div class="card-body">
       <div class="container text-center">
   <div class="row">
+    <!-- Contact information sections -->
     <div class="col">
+         <!-- Address section -->
     <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
@@ -30,6 +33,7 @@ if (isset($_POST['btn'])) {
         </div>
     </div>
 </div>
+<!-- Email section -->
 <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
@@ -46,6 +50,7 @@ if (isset($_POST['btn'])) {
         </div>
     </div>
 </div>
+<!-- Email section -->
 <div class='container-fluid mx-auto mt-5 mb-5 col-12' style="text-align: center">
     <div class="row" style="justify-content: center">
         <div class="card col-md-3 col-12">
@@ -62,6 +67,7 @@ if (isset($_POST['btn'])) {
     </div>
 </div>
     </div>
+    <!-- Form to send a message -->
     <div class="col"><br>
     <h5 class="card-title">Send message</h5>
     <form class="row g-3">
@@ -92,13 +98,14 @@ if (isset($_POST['btn'])) {
 </div>
       
     </div>
+    <!-- button back to home page -->
     <div class="card-footer text-body-secondary">
     <a href="home.php"button type="submit" class="btn btn-primary">Back page</button></a>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
-
+<!-- Footer section  -->
 <footer>
 <li><a href="home.php">Home</a></li>
 <li><a href="about.php">About Us</a></li>

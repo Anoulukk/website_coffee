@@ -35,7 +35,7 @@ if (isset($_SESSION['error'])) {
 <br>
 <br>
 <br>
-     <!-- login -->
+     <!-- login form-->
      <div class="container-sm">
       <div class="login-container" id="login-container">
         <div class="row text-center">

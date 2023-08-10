@@ -1,11 +1,11 @@
-<title>Document</title>
+<title>about</title>
 <?php include('footerheader.php'); 
+//if user enter button search let send data to search.php
 if (isset($_POST['btn'])) {
   $data = $_POST['txt_search'];
   header("location:search.php?keyword=$data");
 }?>
 
-</head>
 
 <body>
   
@@ -41,14 +41,13 @@ g. Demographics of the catchment area
 </div>
       
     </div>
+    //button direct to home page
     <div class="card-footer text-body-secondary">
     <a href="home.php" class="btn btn-custom">back</a>
     </div>
   </div>
-  <script src="script.js"></script>
 
 </body>
-<script src="script.js"></script>
 <footer>
 <li><a href="home.php">Home</a></li>
 <li><a href="about.php">About Us</a></li>

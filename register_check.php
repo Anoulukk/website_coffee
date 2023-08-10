@@ -2,18 +2,17 @@
 include('config.php');
 // $data = $_GET['data'];
 
-
+// Retrieve data
 if (isset($_GET['data'])) {
     $data = $_GET['data'];
     $dataArray = json_decode($data, true);
-    // print_r($dataArray);
     $username = $dataArray['username'];
     $lastname = $dataArray['lastname'];
     $email = $dataArray['email'];
     $password = $dataArray['password1'];
 
     
-    
+// change password number to hash code sha512
         $hashedPassword = hash('sha512', $password);
     
         // Insert the data into the database
@@ -28,7 +27,7 @@ if (isset($_GET['data'])) {
             echo json_encode($response);
         }
     }
-    
+    // close connect to database
     $conn_db->close();
 
 ?>

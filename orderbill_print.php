@@ -1,6 +1,7 @@
 <?php
 session_start();
 include 'config.php';
+// Retrieve order information using the session's order ID
 $sql="SELECT * from tb_order where order_id= '". $_SESSION["order_id"] . "' ";
 $result= mysqli_query($conn_db,$sql);
 $rs=mysqli_fetch_array($result);
@@ -8,6 +9,7 @@ $total_price=$rs['total_price'];
 $sumprice1=number_format($total_price);
 
 ?>
+<!-- Include HTML2Canvas library for capturing screenshots -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +27,7 @@ $sumprice1=number_format($total_price);
       <div class="alert alert-success h4 text-center mt-4" role="alert">
   ການສັ່ງຊື້ສຳເລັດແລ້ວ
 </div>
+ <!-- Order details -->
     ເລກທີການສັ່ງຊື້: <?=$rs['order_id'];?> <br>
     ຊື່ ແລະ ນາມສະກຸນ (ລູກຄ້າ): <?=$rs['cus_name'];?> <br>
     ທີ່ຢູ່ຈັດສົ່ງສິນຄ້າ:<?=$rs['address'];?> <br>
@@ -61,7 +64,7 @@ while($row=mysqli_fetch_array($result8)){ ;
 }
   ?>
 </table>
-
+ <!-- Display total price -->
 <h6 class="text-end">ລວມເປັນເງີນ <?=number_format($sumprice)?>ກີບ</h6>
 </div>
 </div>
@@ -69,48 +72,26 @@ while($row=mysqli_fetch_array($result8)){ ;
 
 
 </div>
+ <!-- Button to capture and print the page -->
 <div class="text-center">
-***ກະລຸນາກົດປຸ່ມ Print ເພີ່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
+***ກະລຸນາກົດປຸ່ມ Print ເພື່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
 <br>
-
 <button onclick="captureA()" class="btn btn-warning">print</button>
-
 </div>
   </div>
 
 
 </body>
 <script>
-  // (A) USING HTML2CANVAS
-function captureA () {
+ // Function to capture and download the screenshot
+function capture () {
   html2canvas(document.body).then(canvas => {
     let a = document.createElement("a");
     a.download = "myorder.png";
     a.href = canvas.toDataURL("image/png");
-    a.click(); // MAY NOT ALWAYS WORK!
+    a.click(); 
   });
 }
-var btna=document.getElementById('btna');
-btna.addEventListener('click',function(e){
-    e.preventDefault()
-    var name=document.getElementById('name').value;
-    var email=document.getElementById('email').value;
-    var address=document.getElementById('address').value;
-    var message=document.getElementById('message').value;
-    var body='name:'+name+'<br/> email:'+email+'<br/> address :'+address+'<br/> message:'+message;
-    swal("Success", "send information to coffee shop success", "success");
-    
-    Email.send({
-    Host : "smtp.elasticemail.com",
-    Username : "tarcoinbit@gmail.com",
-    Password : "725433D77FD5782421713333FA3E5E20B8B3",
-    To : 'tinartiktok1@gmail.com',
-    From :"tarcoinbit@gmail.com",
-    Subject : address,
-    Body : body
-    
-   
-})
-})
+
 </script>
 </html>

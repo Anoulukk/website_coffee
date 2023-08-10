@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
   <link rel="stylesheet" href="./bootstrap-5.3.0-alpha3-dist/css/bootstrap.css">
   <script src="./bootstrap-5.3.0-alpha3-dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -68,6 +67,7 @@
         <div class="col">
           <input type="submit" value="search" name="btn" class="btn btn-custom mb-3 ">
         </div>
+        <!-- button cart for direct to cart page -->
         <div class="cart">
           <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt="" onclick="showCartContainer()" ></a>
         </div>

@@ -5,14 +5,15 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
-
+// change password number to hash code sha512
     $Password = hash('sha512', $password);
-
+// check username and password 
     $sql = "SELECT * FROM customer WHERE cus_firstname = '$username' AND password = '$Password'";
     $result = mysqli_query($conn_db, $sql);
     $row = mysqli_fetch_array($result);
 
     if ($row) {
+ // make session
         $_SESSION["cus_id"] = $row['customer_id'];
         $_SESSION["cus_firstname"] = $row['cus_firstname'];
         $_SESSION["cus_lastname"] = $row['cus_lastname'];
