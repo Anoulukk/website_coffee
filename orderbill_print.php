@@ -28,7 +28,7 @@ $sumprice1=number_format($total_price);
     ເລກທີການສັ່ງຊື້: <?=$rs['order_id'];?> <br>
     ຊື່ ແລະ ນາມສະກຸນ (ລູກຄ້າ): <?=$rs['cus_name'];?> <br>
     ທີ່ຢູ່ຈັດສົ່ງສິນຄ້າ:<?=$rs['address'];?> <br>
-    ເບິໂທລະສັບ: <?=$rs['telephone'];?> <br><br>
+    ເບິໂທລະສັບ: <?=$rs['telephone'];?> <br>
     <div class="card mb-4 mt-2">
         <div class="card-body">
     <table class="table">
@@ -71,7 +71,7 @@ while($row=mysqli_fetch_array($result8)){ ;
 </div>
 <div class="text-center">
 ***ກະລຸນາກົດປຸ່ມ Print ເພີ່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
-<br><br>
+<br>
 
 <button onclick="captureA()" class="btn btn-warning">print</button>
 

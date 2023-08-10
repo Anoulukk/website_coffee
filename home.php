@@ -15,7 +15,7 @@ include('config.php');
       
     </div>
     <div class="col">
-     <h3> My phoduct</h3>
+     <h3> My product</h3>
     </div>
     <div class="col">
       

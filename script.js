@@ -14,16 +14,16 @@ var productNamesArray = [];
 var productIdArray = [];
 var quantityArray = [];
 var priceArray = []; 
+var maxProductsInCart = 7;
+
 form.addEventListener('submit', function (e) {
     const isValid = validateFormInputs();
     if (!isValid) {
         e.preventDefault(); // Prevent form submission if validation fails
     }else{
         sendDataToServer();
-
     }
 });
-
 
 function showError(input, message, duration = 3000) {
     const formControl = input.parentElement;
@@ -155,7 +155,10 @@ var loggedIn = true; // Replace 'true' with your actual login status check
 // function of cart page
   function addToCart(productName, price, proID, quantity) {
       // Check if the product is already in the cart
-
+      if (Object.keys(cartItemsData).length >= maxProductsInCart) {
+        alert("You can only add a maximum of " + maxProductsInCart + " products to the cart.");
+        return;
+    }
       if (cartItemsData[productName]) {
           cartItemsData[productName].quantity += 1;
       } else {
@@ -293,21 +296,3 @@ var loggedIn = true; // Replace 'true' with your actual login status check
         cartBoxContainer.style.display = 'none';
     }
 
-  
-// Initialize the map
-var map = new google.maps.Map(document.getElementById('map-container'), {
-    center: { lat: DEFAULT_LATITUDE, lng: DEFAULT_LONGITUDE },
-    zoom: 14
-  });
-  
-  // Add a marker and update hidden inputs when user clicks on the map
-  map.addListener('click', function(event) {
-    var latitude = event.latLng.lat();
-    var longitude = event.latLng.lng();
-  
-    document.getElementById('latitude').value = latitude;
-    document.getElementById('longitude').value = longitude;
-  
-    // You can also perform reverse geocoding here to get the address
-    // and display it on the form if desired
-  });

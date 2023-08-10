@@ -1,7 +1,11 @@
 <title>Document</title>
 <?php
 include('footerheader.php');
-include('config.php'); ?>
+include('config.php');
+if (isset($_POST['btn'])) {
+  $data = $_POST['txt_search'];
+  header("location:search.php?keyword=$data");
+} ?>
 <link rel="stylesheet" href="style.css">
 
 
