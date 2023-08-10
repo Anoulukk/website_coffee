@@ -16,7 +16,7 @@ session_start();
 </head>
 <nav class="navbar bg-body-tertiary">
   <div class="container-fluid">
-    <a href=""a href=""button type="button" class="btn btn-warning">Go website</button></a></a>
+    <a href="../home.php" class="btn btn-warning">Go website</a>
   <div class="container text-center">
   <div class="row">
     <div class="col">
