@@ -15,7 +15,7 @@ var productIdArray = [];
 var quantityArray = [];
 var priceArray = []; 
 var maxProductsInCart = 7;
-
+// function for check input register form
 form.addEventListener('submit', function (e) {
     const isValid = validateFormInputs();
     if (!isValid) {
