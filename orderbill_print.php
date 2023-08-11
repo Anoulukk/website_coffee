@@ -76,7 +76,7 @@ while($row=mysqli_fetch_array($result8)){ ;
 <div class="text-center">
 ***ກະລຸນາກົດປຸ່ມ Print ເພື່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
 <br>
-<button onclick="captureA()" class="btn btn-warning">print</button>
+<button onclick="capture()" class="btn btn-warning">print</button>
 </div>
   </div>
 

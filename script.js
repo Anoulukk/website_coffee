@@ -153,7 +153,7 @@ var loggedIn = true; // Replace 'true' with your actual login status check
 
 
 // function of cart page
-  function addToCart(productName, price, proID, quantity) {
+  function addToCart(productName, price, proID) {
       // Check if the product is already in the cart
       if (Object.keys(cartItemsData).length >= maxProductsInCart) {
         alert("You can only add a maximum of " + maxProductsInCart + " products to the cart.");
