@@ -15,6 +15,9 @@ var productIdArray = [];
 var quantityArray = [];
 var priceArray = []; 
 var maxProductsInCart = 7;
+var clicks = 0;
+let buttonState = 0;
+const buttonText = ['Print', 'Back'];// a variable to store the number of clicks orderbill click one click two
 // function for check input register form
 form.addEventListener('submit', function (e) {
     const isValid = validateFormInputs();
@@ -295,4 +298,49 @@ var loggedIn = true; // Replace 'true' with your actual login status check
         var cartBoxContainer = document.getElementById('cartBoxContainer');
         cartBoxContainer.style.display = 'none';
     }
+
+
+    //page order bill print button is hove to funtion click1 is capture click two is back to cart page
+    
+    function myFunction() {
+        const button = document.getElementById('toggleButton');
+        buttonState = 1 - buttonState; // Toggle between 0 and 1
+        button.textContent = buttonText[buttonState];
+        clicks++; // increment the number of clicks by one
+        if (clicks == 1) { // if it is the first click, call save()
+            capture();
+        } else if (clicks == 2) { // if it is the second click, call back() and reset clicks
+          back();
+          clicks = 0;
+        }
+        
+      }
+      function capture () {
+      html2canvas(document.body).then(canvas => {
+        let a = document.createElement("a");
+        a.download = "myorder.png";
+        a.href = canvas.toDataURL("image/png");
+        a.click(); 
+        
+      });
+    }
+      function back() {
+        window.location.href="http://localhost/website_coffee/cart.php?id=3";
+       
+      }
+     
+
+
+
+      
+      
+
+
+
+
+
+
+
+
+  
 

@@ -76,22 +76,13 @@ while($row=mysqli_fetch_array($result8)){ ;
 <div class="text-center">
 ***ກະລຸນາກົດປຸ່ມ Print ເພື່ອບັນທຶກອໍເດີ້ຂອງທ່ານ***
 <br>
-<button onclick="capture()" class="btn btn-warning">print</button>
+<button onclick="myFunction()" class="btn btn-warning"id="toggleButton">print</button>
 </div>
   </div>
 
 
 </body>
-<script>
- // Function to capture and download the screenshot
-function capture () {
-  html2canvas(document.body).then(canvas => {
-    let a = document.createElement("a");
-    a.download = "myorder.png";
-    a.href = canvas.toDataURL("image/png");
-    a.click(); 
-  });
-}
-
-</script>
+<script src="script.js"></script>
 </html>
+
+
