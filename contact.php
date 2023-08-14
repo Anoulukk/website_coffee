@@ -91,6 +91,7 @@ if (isset($_POST['btn'])) {
   
   <div class="col-12">
     <button type="submit" class="btn btn-primary"id="btna">Send now</button>
+    
   </div>
 </form>
     </div>
@@ -104,6 +105,7 @@ if (isset($_POST['btn'])) {
     </div>
   </div>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 <!-- Footer section  -->
 <footer>
