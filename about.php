@@ -41,7 +41,7 @@ g. Demographics of the catchment area
 </div>
       
     </div>
-    //button direct to home page
+    <!-- //button direct to home page -->
     <div class="card-footer text-body-secondary">
     <a href="home.php" class="btn btn-custom">back</a>
     </div>
