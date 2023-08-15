@@ -1,4 +1,4 @@
-const form = document.getElementById('form');
+
 const username = document.getElementById('username');
 const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
@@ -19,14 +19,7 @@ var clicks = 0;
 let buttonState = 0;
 const buttonText = ['Print', 'Back'];// a variable to store the number of clicks orderbill click one click two
 // function for check input register form
-form.addEventListener('submit', function (e) {
-    const isValid = validateFormInputs();
-    if (!isValid) {
-        e.preventDefault(); // Prevent form submission if validation fails
-    }else{
-        sendDataToServer();
-    }
-});
+
 
 function showError(input, message, duration = 3000) {
     const formControl = input.parentElement;
@@ -139,20 +132,6 @@ function sendDataToServer() {
     console.log(data);
 }
 
-var loggedIn = true; // Replace 'true' with your actual login status check
-
-  // Get references to the login and logout buttons
-  var loginButton = document.getElementById('loginButton');
-  var logoutButton = document.getElementById('logoutButton');
-
-  // Toggle button visibility based on the login status
-  if (loggedIn) {
-    loginButton.style.display = 'none';
-    logoutButton.style.display = 'inline-block';
-  } else {
-    loginButton.style.display = 'inline-block';
-    logoutButton.style.display = 'none';
-  }
 
 
 // function of cart page
