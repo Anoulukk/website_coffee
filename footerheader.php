@@ -69,7 +69,7 @@
         </div>
         <!-- button cart for direct to cart page -->
         <div class="cart">
-          <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt="" onclick="showCartContainer()" ></a>
+          <a href="cart.php"><img src="./img/shopping-cart 1.svg" width="80%" alt="" onclick="showCartContainer()"> </a>
         </div>
       </form>
       <div class="login-logout-buttons">
@@ -82,17 +82,22 @@
         if ($logged_in) {
           // If logged in, show the logout button
           echo '<a href="logout.php" class="btn btn-custom mb-3">Logout</a>';
+          
         } else {
           // If not logged in, show the login button
           echo '<a href="login.php" class="btn btn-custom mb-3">Login</a>';
+          
         }
         ?>
+        
       </div>
+
 
       
     </div>
   </nav>
 </header>
+
 
 
 </html>
